@@ -1,203 +1,197 @@
 #!/usr/bin/env python3
-
-'''
-This python file runs a ROS 2-node of name pico_control which holds the position of Swift Pico Drone on the given drone.
-This node publishes and subsribes the following topics:
-
-		PUBLICATIONS			SUBSCRIPTIONS
-		/drone_command			/whycode_node/markers
-		/pos_error				/throttle_pid
-								/pitch_pid
-								/roll_pid
-
-Rather than using different variables, use list. eg : self.desired_state = [1,2,3], where index corresponds to x,y,z ...rather than defining self.x_desired_state = 1, self.y_desired_state = 2
-CODE MODULARITY AND TECHNIQUES MENTIONED LIKE THIS WILL HELP YOU GAINING MORE MARKS WHILE CODE EVALUATION.
-'''
-
-# Importing the required libraries
-
-
 from swift_msgs.msg import SwiftMsgs
 from whycode_interfaces.msg import MarkerArray
 from controller_msg.msg import PIDTune
 from error_msg.msg import Error
 from std_msgs.msg import Header
+import time
 import rclpy
 from rclpy.node import Node
 
 
 class Swift_Pico(Node):
-	def __init__(self):
-		super().__init__('pico_controller')  # initializing ros node with name pico_controller
-
-		# This corresponds to your current position of drone. This value must be updated in your whycode callback
-		# [x,y,z]
-		self.current_state = [0.0, 0.0, 0.0]
-
-
-
-
-		# This corresponds to the setpoint you want the drone to reach or hold
-		# [x_desired_state, y_desired_state, z_desired_state]
-		self.desired_state = [1.0, -1.0, 13.0]  # whycode marker at the position of the drone given in the scene. Make the whycode marker associated with position_to_hold drone renderable and make changes accordingly
-
-
-
-
-		# Declaring a cmd of message type swift_msgs and initializing values
-		self.cmd = SwiftMsgs()
-		self.cmd.rc_roll = 1500
-		self.cmd.rc_pitch = 1500
-		self.cmd.rc_yaw = 1500
-		self.cmd.rc_throttle = 1500
-
-		#initial setting of Kp, Kd and ki for [roll, pitch, throttle]. eg: self.Kp[2] corresponds to Kp value in throttle axis
-		#after tuning and computing corresponding PID parameters, change the parameters
-
-		self.Kp = [0, 0, 0]
-		self.Ki = [0, 0, 0]
-		self.Kd = [0, 0, 0]
-
-		#-----------------------Add other required variables for pid here ----------------------------------------------
-
-
-
-
-
-
-
-
-
-		# Hint : Add variables for storing previous errors in each axis, like self.prev_error = [0,0,0] where corresponds to [pitch, roll, throttle]		#		 Add variables for limiting the values like self.max_values = [2000,2000,2000] corresponding to [roll, pitch, throttle]
-		#													self.min_values = [1000,1000,1000] corresponding to [pitch, roll, throttle]
-		#																	You can change the upper limit and lower limit accordingly. 
-		#----------------------------------------------------------------------------------------------------------
-
-		# # This is the sample time in which you need to run pid. Choose any time which you seem fit.
-	
-		self.sample_time = 0.033  # in seconds
-
-		# Publishing /drone_command, /pos_error
-		self.command_pub = self.create_publisher(SwiftMsgs, '/drone_command', 10)
-		self.pos_error_pub = self.create_publisher(Error, '/pos_error', 10)
-		self.heartbeat_pub = self.create_publisher(Header, '/controller_heartbeat', 10)
-
-		#------------------------Add other ROS 2 Publishers here-----------------------------------------------------
-
-
-		# Subscribing to /whycode_node/markers, /throttle_pid, /pitch_pid, roll_pid
-		self.create_subscription(MarkerArray, '/whycode_node/markers', self.whycode_callback, 1)
-		self.create_subscription(PIDTune, "/throttle_pid", self.altitude_set_pid, 1)
-
-		#------------------------Add other ROS Subscribers here-----------------------------------------------------
-
-		self.arm()  # ARMING THE DRONE
-
-		self.publish_heartbeat()
-		self.create_timer(1.0, self.publish_heartbeat)
-
-		# Creating a timer to run the pid function periodically, refer ROS 2 tutorials on how to create a publisher subscriber(Python)
-
-
-	def publish_heartbeat(self):
-		hb = Header()
-		hb.stamp = self.get_clock().now().to_msg()
-		hb.frame_id = 'pico_controller_active'
-		self.heartbeat_pub.publish(hb)
-
-	def disarm(self):
-		self.cmd.rc_roll = 1000
-		self.cmd.rc_yaw = 1000
-		self.cmd.rc_pitch = 1000
-		self.cmd.rc_throttle = 1000
-		self.cmd.rc_aux4 = 1000
-		self.command_pub.publish(self.cmd)
-		
-
-	def arm(self):
-		self.disarm()
-		self.cmd.rc_roll = 1500
-		self.cmd.rc_yaw = 1500
-		self.cmd.rc_pitch = 1500
-		self.cmd.rc_throttle = 1500
-		self.cmd.rc_aux4 = 2000
-		self.command_pub.publish(self.cmd)  # Publishing /drone_command
-
-
-	# Whycode callback function
-	# The function gets executed each time when /whycode_node publishes /whycode_node/markers
-	def whycode_callback(self, msg):
-		self.current_state[0] = msg.markers[0].position.position.x
-		#--------------------Set the remaining co-ordinates of the drone from msg----------------------------------------------
-
-
-
-	
-		#---------------------------------------------------------------------------------------------------------------
-
-
-	# Callback function for /throttle_pid
-	# This function gets executed each time when /drone_pid_tuner publishes /throttle_pid
-	def altitude_set_pid(self, alt):
-		self.Kp[2] = alt.kp * 0.03  # This is just for an example. You can change the ratio/fraction value accordingly
-		self.Ki[2] = alt.ki * 0.008
-		self.Kd[2] = alt.kd * 0.6
-
-	#----------------------------Define callback function like altitide_set_pid to tune pitch, roll--------------
-
-	#----------------------------------------------------------------------------------------------------------------------
-
-
-	def pid(self):
-	#-----------------------------Write the PID algorithm here--------------------------------------------------------------
-
-	# Steps:
-	# 	1. Compute error in each axis. eg: error[0] = self.current_state[0] - self.desired_state[0] ,where error[0] corresponds to error in x...
-	#	2. Compute the error (for proportional), change in error (for derivative) and sum of errors (for integral) in each axis. Refer "Understanding PID.pdf" to understand PID equation.
-	#	3. Calculate the pid output required for each axis. For eg: calcuate self.out_roll, self.out_pitch, etc.
-	#	4. Reduce or add this computed output value on the avg value ie 1500. For eg: self.cmd.rcRoll = 1500 + self.out_roll. LOOK OUT FOR SIGN (+ or -). EXPERIMENT AND FIND THE CORRECT SIGN
-	#	5. Don't run the pid continously. Run the pid only at the a sample time. self.sampletime defined above is for this purpose. THIS IS VERY IMPORTANT.
-	#	6. Limit the output value and the final command value between the maximum(2000) and minimum(1000)range before publishing. For eg : if self.cmd.rcPitch > self.max_values[1]:
-	#																														self.cmd.rcPitch = self.max_values[1]
-	#	7. Update previous errors.eg: self.prev_error[1] = error[1] where index 1 corresponds to that of pitch (eg)
-	#	8. Add error_sum
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	#------------------------------------------------------------------------------------------------------------------------
-		self.command_pub.publish(self.cmd)
-		# calculate throttle error, pitch error and roll error, then publish it accordingly
-		self.pos_error_pub.publish(self.pos_error)
-
+    def __init__(self):
+        super().__init__('pico_controller')
+
+        # ---------------- State ----------------
+        self.current_state = [0.0, 0.0, 0.0]      # [x, y, z] raw WhyCode units
+        self.desired_state = [1.5, -1.5, 13.0]    # target [x, y, z]
+        self.have_marker = False                  # True after first marker message
+
+        # ---------------- Command message ----------------
+        self.cmd = SwiftMsgs()
+        self.cmd.rc_roll = 1500
+        self.cmd.rc_pitch = 1500
+        self.cmd.rc_yaw = 1500
+        self.cmd.rc_throttle = 1500
+
+        self.pos_error = Error()
+
+        self.USE_GUI = False
+
+    
+        self.Kp = [14,14,28]
+        self.Ki = [0.00112,0.00112,0.06]
+        self.Kd = [800,800,1800]
+
+
+        self.kp_scale = [1.0, 1.0, 1.0]
+        self.ki_scale = [0.008, 0.008, 0.008]
+        self.kd_scale = [10.0, 10.0, 10.0]
+
+        
+        self.sign = [-1, -1, 1]
+
+    
+        self.base_values = [1500, 1500, 1500]
+
+        self.prev_error = [0.0, 0.0, 0.0]
+        self.error_sum = [0.0, 0.0, 0.0]
+        self.first_run = True
+
+        # Output limits [pitch, roll, throttle]
+        self.min_values = [1000, 1000, 1000]
+        self.max_values = [2000, 2000, 2000]
+
+        # Anti-windup
+        self.i_zone = 1.0          # integrate only when |error| < this
+        self.max_i_term = 100.0    # cap on the I contribution (command units)
+
+        self.sample_time = 0.033   # control loop period (s)
+
+        # ---------------- Publishers ----------------
+        self.command_pub = self.create_publisher(SwiftMsgs, '/drone_command', 10)
+        self.pos_error_pub = self.create_publisher(Error, '/pos_error', 10)
+        self.heartbeat_pub = self.create_publisher(Header, '/controller_heartbeat', 10)
+
+        # ---------------- Subscribers ----------------
+        self.create_subscription(MarkerArray, '/whycode_node/markers', self.whycode_callback, 1)
+        self.create_subscription(PIDTune, '/pitch_pid', self.pitch_set_pid, 1)
+        self.create_subscription(PIDTune, '/roll_pid', self.roll_set_pid, 1)
+        self.create_subscription(PIDTune, '/throttle_pid', self.altitude_set_pid, 1)
+
+        
+
+        self.publish_heartbeat()
+        self.create_timer(1.0, self.publish_heartbeat)
+        time.sleep(0.5)
+        self.arm()
+        self.create_timer(self.sample_time, self.pid)
+
+    # ---------------- Heartbeat / arming ----------------
+    def publish_heartbeat(self):
+        hb = Header()
+        hb.stamp = self.get_clock().now().to_msg()
+        hb.frame_id = 'pico_controller_active'
+        self.heartbeat_pub.publish(hb)
+
+    def disarm(self):
+        self.cmd.rc_roll = 1000
+        self.cmd.rc_yaw = 1000
+        self.cmd.rc_pitch = 1000
+        self.cmd.rc_throttle = 1000
+        self.cmd.rc_aux4 = 1000
+        self.command_pub.publish(self.cmd)
+
+    def arm(self):
+        self.disarm()
+        self.cmd.rc_roll = 1500
+        self.cmd.rc_yaw = 1500
+        self.cmd.rc_pitch = 1500
+        self.cmd.rc_throttle = 1500
+        self.cmd.rc_aux4 = 2000
+        self.command_pub.publish(self.cmd)
+
+    # ---------------- Callbacks ----------------
+    def whycode_callback(self, msg):
+        if not msg.markers:        # marker not visible: keep last known position
+            return
+        p = msg.markers[0].position.position
+        self.current_state = [p.x, p.y, p.z]
+        self.have_marker = True
+
+    def set_gains(self, axis, msg):
+        '''Shared by the three gain callbacks. axis: 0=pitch, 1=roll, 2=throttle.'''
+        if not self.USE_GUI:
+            return
+        self.Kp[axis] = msg.kp * self.kp_scale[axis]
+        self.Ki[axis] = msg.ki * self.ki_scale[axis]
+        self.Kd[axis] = msg.kd * self.kd_scale[axis]
+        self.get_logger().info(
+            f'axis {axis}: Kp={self.Kp[axis]:.3f} Ki={self.Ki[axis]:.4f} Kd={self.Kd[axis]:.3f}')
+
+    def pitch_set_pid(self, msg):
+        self.set_gains(0, msg)
+
+    def roll_set_pid(self, msg):
+        self.set_gains(1, msg)
+
+    def altitude_set_pid(self, msg):
+        self.set_gains(2, msg)
+
+    # ---------------- PID ----------------
+    def clamp(self, value, axis):
+        return int(max(self.min_values[axis], min(self.max_values[axis], value)))
+
+    def pid(self):
+        if not self.have_marker:
+            return
+
+        # Error = current - desired
+        errors = [c - d for c, d in zip(self.current_state, self.desired_state)]
+
+        if self.first_run:         # avoid a fake derivative spike on cycle 1
+            self.prev_error = errors[:]
+            self.first_run = False
+
+        outputs = []
+        for i in range(3):
+            err = errors[i]
+
+            if abs(err) < self.i_zone:
+                self.error_sum[i] += err
+            else:
+                self.error_sum[i] = 0.0
+
+            p_term = self.Kp[i] * err
+            d_term = self.Kd[i] * (err - self.prev_error[i])
+            i_term = self.Ki[i] * self.error_sum[i]
+            i_term = max(-self.max_i_term, min(self.max_i_term, i_term))
+
+            outputs.append(p_term + i_term + d_term)
+            self.prev_error[i] = err
+
+        self.cmd.rc_pitch = self.clamp(self.base_values[0] + self.sign[0] * outputs[0], 0)
+        self.cmd.rc_roll = self.clamp(self.base_values[1] + self.sign[1] * outputs[1], 1)
+        self.cmd.rc_throttle = self.clamp(self.base_values[2] + self.sign[2] * outputs[2], 2)
+
+        self.pos_error.pitch_error = errors[0]
+        self.pos_error.roll_error = errors[1]
+        self.pos_error.throttle_error = errors[2]
+
+        self.command_pub.publish(self.cmd)
+        self.pos_error_pub.publish(self.pos_error)
+
+        self.get_logger().info(
+            f'pos={[round(v, 2) for v in self.current_state]} '
+            f'err={[round(e, 2) for e in errors]} '
+            f'cmd=[{self.cmd.rc_pitch}, {self.cmd.rc_roll}, {self.cmd.rc_throttle}]',
+            throttle_duration_sec=1.0)
 
 
 def main(args=None):
-	rclpy.init(args=args)
-	swift_pico = Swift_Pico()
- 
-	try:
-		rclpy.spin(swift_pico)
-	except KeyboardInterrupt:
-		swift_pico.get_logger().info('KeyboardInterrupt, shutting down.\n')
-	finally:
-		swift_pico.destroy_node()
-		rclpy.shutdown()
+    rclpy.init(args=args)
+    swift_pico = Swift_Pico()
+
+    try:
+        rclpy.spin(swift_pico)
+    except KeyboardInterrupt:
+        swift_pico.get_logger().info('KeyboardInterrupt, shutting down.\n')
+    finally:
+        swift_pico.disarm()
+        swift_pico.destroy_node()
+        rclpy.shutdown()
 
 
 if __name__ == '__main__':
-	main()
+    main()
