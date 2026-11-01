@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_generator_py/whycode_interfaces/msg/_marker_s.c

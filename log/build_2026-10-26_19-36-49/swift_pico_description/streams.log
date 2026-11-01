@@ -1,0 +1,30 @@
+[0.024s] Invoking command in '/home/santosh/pico_ws/src/build/swift_pico_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/swift_pico_description -- -j16 -l16
+[0.077s] Invoked command in '/home/santosh/pico_ws/src/build/swift_pico_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/swift_pico_description -- -j16 -l16
+[0.084s] Invoking command in '/home/santosh/pico_ws/src/build/swift_pico_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/swift_pico_description
+[0.088s] -- Install configuration: ""
+[0.089s] -- Execute custom install script
+[0.089s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/arena.xml
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/drone.xml
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/base_link.obj
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/m1_link.obj
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/m4_link.obj
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/textures/Khojo_Arena.png
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/textures/whycode_marker_1.png
+[0.090s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/triangle_marker.obj
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/models/swift_pico/meshes/whycon_marker.obj
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/ament_index/resource_index/package_run_dependencies/swift_pico_description
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/ament_index/resource_index/parent_prefix_path/swift_pico_description
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/environment/ament_prefix_path.sh
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/environment/ament_prefix_path.dsv
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/environment/path.sh
+[0.091s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/environment/path.dsv
+[0.093s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/local_setup.bash
+[0.093s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/local_setup.sh
+[0.093s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/local_setup.zsh
+[0.093s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/local_setup.dsv
+[0.093s] -- Symlinking: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/package.dsv
+[0.110s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/ament_index/resource_index/packages/swift_pico_description
+[0.110s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/cmake/swift_pico_descriptionConfig.cmake
+[0.110s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/cmake/swift_pico_descriptionConfig-version.cmake
+[0.110s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/package.xml
+[0.124s] Invoked command in '/home/santosh/pico_ws/src/build/swift_pico_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/swift_pico_description

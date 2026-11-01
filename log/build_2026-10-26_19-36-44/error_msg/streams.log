@@ -1,0 +1,127 @@
+[0.032s] Invoking command in '/home/santosh/pico_ws/src/build/error_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/error_msg -- -j16 -l16
+[0.090s] [  3%] Built target error_msg__rs
+[0.094s] [  6%] Built target error_msg__cpp
+[0.120s] [ 15%] Built target error_msg__rosidl_generator_c
+[0.120s] [ 15%] Built target ament_cmake_python_symlink_error_msg
+[0.154s] [ 25%] Built target error_msg__rosidl_typesupport_fastrtps_cpp
+[0.175s] [ 34%] Built target error_msg__rosidl_typesupport_cpp
+[0.175s] [ 43%] Built target error_msg__rosidl_typesupport_introspection_cpp
+[0.182s] [ 59%] Built target error_msg__rosidl_typesupport_introspection_c
+[0.182s] [ 62%] Built target error_msg__rosidl_typesupport_fastrtps_c
+[0.195s] [ 71%] Built target error_msg__rosidl_typesupport_c
+[0.215s] [ 71%] Built target error_msg
+[0.235s] [ 75%] Built target error_msg__py
+[0.271s] [ 81%] Built target error_msg__rosidl_generator_py
+[0.287s] [ 87%] Built target error_msg__rosidl_typesupport_fastrtps_c__pyext
+[0.299s] [ 93%] Built target error_msg__rosidl_typesupport_introspection_c__pyext
+[0.299s] [100%] Built target error_msg__rosidl_typesupport_c__pyext
+[0.427s] running egg_info
+[0.428s] writing error_msg.egg-info/PKG-INFO
+[0.429s] writing dependency_links to error_msg.egg-info/dependency_links.txt
+[0.429s] writing top-level names to error_msg.egg-info/top_level.txt
+[0.431s] reading manifest file 'error_msg.egg-info/SOURCES.txt'
+[0.432s] writing manifest file 'error_msg.egg-info/SOURCES.txt'
+[0.463s] [100%] Built target ament_cmake_python_build_error_msg_egg
+[0.473s] Invoked command in '/home/santosh/pico_ws/src/build/error_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/error_msg -- -j16 -l16
+[0.479s] Invoking command in '/home/santosh/pico_ws/src/build/error_msg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/error_msg
+[0.482s] -- Install configuration: ""
+[0.485s] -- Execute custom install script
+[0.486s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/ament_index/resource_index/rosidl_interfaces/error_msg
+[0.486s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__functions.h
+[0.486s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__struct.h
+[0.487s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__type_support.h
+[0.487s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/error.h
+[0.488s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/rosidl_generator_c__visibility_control.h
+[0.488s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/library_path.sh
+[0.488s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/library_path.dsv
+[0.488s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__rosidl_typesupport_fastrtps_c.h
+[0.488s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__builder.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__struct.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__traits.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__type_support.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/error.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__rosidl_typesupport_fastrtps_cpp.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__rosidl_typesupport_introspection_c.h
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/include/error_msg/error_msg/msg/detail/error__rosidl_typesupport_introspection_cpp.hpp
+[0.489s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/pythonpath.sh
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/pythonpath.dsv
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg-0.0.0-py3.10.egg-info/PKG-INFO
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg-0.0.0-py3.10.egg-info/top_level.txt
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/__init__.py
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/_error_msg_s.ep.rosidl_typesupport_c.c
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/_error_msg_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/_error_msg_s.ep.rosidl_typesupport_introspection_c.c
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/liberror_msg__rosidl_generator_py.so
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/msg/__init__.py
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/msg/_error.py
+[0.490s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/msg/_error_s.c
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/error_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/rust/Cargo.toml
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/rust/build.rs
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/rust/src/lib.rs
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/rust/src/msg.rs
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/rust/src/msg/rmw.rs
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/msg/Error.idl
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/msg/Error.msg
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/ament_index/resource_index/package_run_dependencies/error_msg
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/ament_index/resource_index/parent_prefix_path/error_msg
+[0.491s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/ament_prefix_path.sh
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/ament_prefix_path.dsv
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/path.sh
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/environment/path.dsv
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/local_setup.bash
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/local_setup.sh
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/local_setup.zsh
+[0.492s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/local_setup.dsv
+[0.492s] -- Symlinking: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/package.dsv
+[0.495s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/ament_index/resource_index/packages/error_msg
+[0.495s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/rosidl_cmake-extras.cmake
+[0.496s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.496s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.496s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/ament_cmake_export_libraries-extras.cmake
+[0.496s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/ament_cmake_export_targets-extras.cmake
+[0.497s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.497s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.497s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[0.497s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msgConfig.cmake
+[0.498s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msgConfig-version.cmake
+[0.498s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/package.xml
+[0.499s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_generator_c.so
+[0.500s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_fastrtps_c.so
+[0.500s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_fastrtps_cpp.so
+[0.501s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_introspection_c.so
+[0.501s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_c.so
+[0.501s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_introspection_cpp.so
+[0.501s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_typesupport_cpp.so
+[0.527s] Listing '/home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg'...
+[0.527s] Listing '/home/santosh/pico_ws/src/install/error_msg/local/lib/python3.10/dist-packages/error_msg/msg'...
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/lib/liberror_msg__rosidl_generator_py.so
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_generator_cExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_generator_cExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_typesupport_fastrtps_cExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_generator_cppExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_introspection_cExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_cExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_cExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_introspection_cppExport.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.531s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_cppExport.cmake
+[0.532s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/error_msg__rosidl_typesupport_cppExport-noconfig.cmake
+[0.532s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_generator_pyExport.cmake
+[0.532s] -- Up-to-date: /home/santosh/pico_ws/src/install/error_msg/share/error_msg/cmake/export_error_msg__rosidl_generator_pyExport-noconfig.cmake
+[0.566s] Invoked command in '/home/santosh/pico_ws/src/build/error_msg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/error_msg

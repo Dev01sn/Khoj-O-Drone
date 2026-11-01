@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/rotors_swift_description/ament_cmake_environment_hooks/local_setup.zsh

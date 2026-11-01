@@ -1,0 +1,150 @@
+[0.029s] Invoking command in '/home/santosh/pico_ws/src/build/waypoint_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/waypoint_navigation -- -j16 -l16
+[0.107s] [ 10%] Built target waypoint_navigation__rosidl_generator_c
+[0.136s] [ 12%] Built target waypoint_navigation__rs
+[0.144s] [ 12%] Built target ament_cmake_python_symlink_waypoint_navigation
+[0.144s] [ 15%] Built target waypoint_navigation__cpp
+[0.150s] [ 25%] Built target waypoint_navigation__rosidl_typesupport_introspection_c
+[0.162s] [ 35%] Built target waypoint_navigation__rosidl_typesupport_c
+[0.173s] [ 45%] Built target waypoint_navigation__rosidl_typesupport_fastrtps_c
+[0.181s] [ 55%] Built target waypoint_navigation__rosidl_typesupport_cpp
+[0.184s] [ 65%] Built target waypoint_navigation__rosidl_typesupport_introspection_cpp
+[0.186s] [ 75%] Built target waypoint_navigation__rosidl_typesupport_fastrtps_cpp
+[0.209s] [ 75%] Built target waypoint_navigation
+[0.243s] [ 77%] Built target waypoint_navigation__py
+[0.268s] [ 85%] Built target waypoint_navigation__rosidl_generator_py
+[0.289s] [ 95%] Built target waypoint_navigation__rosidl_typesupport_fastrtps_c__pyext
+[0.289s] [ 95%] Built target waypoint_navigation__rosidl_typesupport_c__pyext
+[0.290s] [100%] Built target waypoint_navigation__rosidl_typesupport_introspection_c__pyext
+[0.363s] running egg_info
+[0.363s] writing waypoint_navigation.egg-info/PKG-INFO
+[0.364s] writing dependency_links to waypoint_navigation.egg-info/dependency_links.txt
+[0.364s] writing top-level names to waypoint_navigation.egg-info/top_level.txt
+[0.365s] reading manifest file 'waypoint_navigation.egg-info/SOURCES.txt'
+[0.366s] writing manifest file 'waypoint_navigation.egg-info/SOURCES.txt'
+[0.390s] [100%] Built target ament_cmake_python_build_waypoint_navigation_egg
+[0.402s] Invoked command in '/home/santosh/pico_ws/src/build/waypoint_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/waypoint_navigation -- -j16 -l16
+[0.402s] Invoking command in '/home/santosh/pico_ws/src/build/waypoint_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/waypoint_navigation
+[0.411s] -- Install configuration: ""
+[0.411s] -- Execute custom install script
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/ament_index/resource_index/rosidl_interfaces/waypoint_navigation
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__functions.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__struct.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__type_support.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/nav_to_waypoint.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/msg/rosidl_generator_c__visibility_control.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__functions.h
+[0.412s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__struct.h
+[0.413s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__type_support.h
+[0.413s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/get_waypoints.h
+[0.413s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/library_path.sh
+[0.413s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/library_path.dsv
+[0.413s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__rosidl_typesupport_fastrtps_c.h
+[0.414s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.414s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__rosidl_typesupport_fastrtps_c.h
+[0.414s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__rosidl_typesupport_introspection_c.h
+[0.414s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.414s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__rosidl_typesupport_introspection_c.h
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__builder.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__struct.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__traits.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__type_support.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/nav_to_waypoint.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__builder.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__struct.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__traits.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__type_support.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/get_waypoints.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__rosidl_typesupport_fastrtps_cpp.hpp
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.416s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__rosidl_typesupport_fastrtps_cpp.hpp
+[0.417s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/action/detail/nav_to_waypoint__rosidl_typesupport_introspection_cpp.hpp
+[0.417s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/include/waypoint_navigation/waypoint_navigation/srv/detail/get_waypoints__rosidl_typesupport_introspection_cpp.hpp
+[0.417s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/pythonpath.sh
+[0.417s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/pythonpath.dsv
+[0.418s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation-0.0.0-py3.10.egg-info/PKG-INFO
+[0.418s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.418s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.418s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation-0.0.0-py3.10.egg-info/top_level.txt
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/__init__.py
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/_waypoint_navigation_s.ep.rosidl_typesupport_c.c
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/_waypoint_navigation_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/_waypoint_navigation_s.ep.rosidl_typesupport_introspection_c.c
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/action/__init__.py
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/action/_nav_to_waypoint.py
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/action/_nav_to_waypoint_s.c
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/libwaypoint_navigation__rosidl_generator_py.so
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/srv/__init__.py
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/srv/_get_waypoints.py
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/srv/_get_waypoints_s.c
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.419s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/waypoint_navigation_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/Cargo.toml
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/build.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/src/action.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/src/action/rmw.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/src/lib.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/src/srv.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/rust/src/srv/rmw.rs
+[0.421s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/action/NavToWaypoint.idl
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/srv/GetWaypoints.idl
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/action/NavToWaypoint.action
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/srv/GetWaypoints.srv
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/srv/GetWaypoints_Request.msg
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/srv/GetWaypoints_Response.msg
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/ament_index/resource_index/package_run_dependencies/waypoint_navigation
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/ament_index/resource_index/parent_prefix_path/waypoint_navigation
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/ament_prefix_path.sh
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/ament_prefix_path.dsv
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/path.sh
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/environment/path.dsv
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/local_setup.bash
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/local_setup.sh
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/local_setup.zsh
+[0.422s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/local_setup.dsv
+[0.422s] -- Symlinking: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/package.dsv
+[0.427s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/ament_index/resource_index/packages/waypoint_navigation
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/rosidl_cmake-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/ament_cmake_export_libraries-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/ament_cmake_export_targets-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[0.428s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigationConfig.cmake
+[0.429s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigationConfig-version.cmake
+[0.429s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/package.xml
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_generator_c.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_fastrtps_c.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_introspection_c.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_c.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_fastrtps_cpp.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_introspection_cpp.so
+[0.429s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_typesupport_cpp.so
+[0.453s] Listing '/home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation'...
+[0.453s] Listing '/home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/action'...
+[0.453s] Listing '/home/santosh/pico_ws/src/install/waypoint_navigation/local/lib/python3.10/dist-packages/waypoint_navigation/srv'...
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/lib/libwaypoint_navigation__rosidl_generator_py.so
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_generator_cExport.cmake
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_generator_cExport-noconfig.cmake
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_typesupport_fastrtps_cExport.cmake
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.456s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_introspection_cExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_cExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_cExport-noconfig.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_generator_cppExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_introspection_cppExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_cppExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/waypoint_navigation__rosidl_typesupport_cppExport-noconfig.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_generator_pyExport.cmake
+[0.457s] -- Up-to-date: /home/santosh/pico_ws/src/install/waypoint_navigation/share/waypoint_navigation/cmake/export_waypoint_navigation__rosidl_generator_pyExport-noconfig.cmake
+[0.482s] Invoked command in '/home/santosh/pico_ws/src/build/waypoint_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/waypoint_navigation

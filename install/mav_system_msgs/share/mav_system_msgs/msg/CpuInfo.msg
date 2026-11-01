@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/mav_comm/mav_system_msgs/msg/CpuInfo.msg

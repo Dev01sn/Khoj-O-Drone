@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_generator_rs/waypoint_navigation/rust/src/srv.rs

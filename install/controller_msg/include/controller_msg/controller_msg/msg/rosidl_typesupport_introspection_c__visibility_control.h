@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/controller_msg/rosidl_typesupport_introspection_c/controller_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h

@@ -1,0 +1,6 @@
+# Request
+bool get_waypoints
+---
+# Response
+geometry_msgs/PoseArray waypoints
+string[] marker_ids

@@ -1,0 +1,162 @@
+[0.022s] Invoking command in '/home/santosh/pico_ws/src/build/mav_system_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake /home/santosh/pico_ws/src/mav_comm/mav_system_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/santosh/pico_ws/src/install/mav_system_msgs
+[0.159s] -- The C compiler identification is GNU 11.4.0
+[0.318s] -- The CXX compiler identification is GNU 11.4.0
+[0.325s] -- Detecting C compiler ABI info
+[0.378s] -- Detecting C compiler ABI info - done
+[0.384s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.385s] -- Detecting C compile features
+[0.385s] -- Detecting C compile features - done
+[0.388s] -- Detecting CXX compiler ABI info
+[0.465s] -- Detecting CXX compiler ABI info - done
+[0.473s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.473s] -- Detecting CXX compile features
+[0.474s] -- Detecting CXX compile features - done
+[0.477s] -- Found std_msgs: 4.9.2 (/opt/ros/humble/share/std_msgs/cmake)
+[0.630s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.689s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.760s] -- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.768s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.780s] -- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.796s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.817s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.108s] -- Found ament_cmake_ros: 0.10.1 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.424s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.534s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.543s] -- Configuring done
+[1.556s] -- Generating done
+[1.561s] -- Build files have been written to: /home/santosh/pico_ws/src/build/mav_system_msgs
+[1.570s] Invoked command in '/home/santosh/pico_ws/src/build/mav_system_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake /home/santosh/pico_ws/src/mav_comm/mav_system_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/santosh/pico_ws/src/install/mav_system_msgs
+[1.571s] Invoking command in '/home/santosh/pico_ws/src/build/mav_system_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/mav_system_msgs -- -j16 -l16
+[1.604s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.611s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[2.056s] [  6%] Built target mav_system_msgs__cpp
+[2.078s] [ 10%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.089s] [ 13%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.090s] [ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.176s] [ 20%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_system_msgs/msg/detail/cpu_info__functions.c.o[0m
+[2.176s] [ 24%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_system_msgs/msg/detail/process_info__functions.c.o[0m
+[2.328s] [ 27%] [32m[1mLinking C shared library libmav_system_msgs__rosidl_generator_c.so[0m
+[2.418s] [ 27%] Built target mav_system_msgs__rosidl_generator_c
+[2.442s] [ 31%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.462s] [ 34%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.468s] [ 37%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[3.159s] [ 41%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_system_msgs/msg/detail/dds_fastrtps/cpu_info__type_support.cpp.o[0m
+[3.167s] [ 44%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_system_msgs/msg/detail/dds_fastrtps/process_info__type_support.cpp.o[0m
+[3.648s] [ 48%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_system_msgs/msg/detail/cpu_info__type_support.c.o[0m
+[3.653s] [ 51%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_system_msgs/msg/detail/process_info__type_support.c.o[0m
+[3.689s] [ 55%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_system_msgs/msg/detail/cpu_info__type_support.cpp.o[0m
+[3.692s] [ 58%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_system_msgs/msg/detail/process_info__type_support.cpp.o[0m
+[3.699s] [ 62%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_system_msgs/msg/cpu_info__type_support.cpp.o[0m
+[3.713s] [ 65%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_system_msgs/msg/process_info__type_support.cpp.o[0m
+[3.747s] [ 68%] [32m[1mLinking C shared library libmav_system_msgs__rosidl_typesupport_introspection_c.so[0m
+[3.764s] [ 72%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_system_msgs/msg/cpu_info__type_support.cpp.o[0m
+[3.768s] [ 75%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_system_msgs/msg/detail/process_info__type_support_c.cpp.o[0m
+[3.773s] [ 79%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_system_msgs/msg/process_info__type_support.cpp.o[0m
+[3.779s] [ 82%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_system_msgs/msg/detail/cpu_info__type_support_c.cpp.o[0m
+[3.832s] [ 82%] Built target mav_system_msgs__rosidl_typesupport_introspection_c
+[3.847s] [ 86%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_c.so[0m
+[3.957s] [ 86%] Built target mav_system_msgs__rosidl_typesupport_c
+[4.046s] [ 89%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[4.222s] [ 93%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_cpp.so[0m
+[4.227s] [ 93%] Built target mav_system_msgs__rosidl_typesupport_fastrtps_cpp
+[4.316s] [ 93%] Built target mav_system_msgs__rosidl_typesupport_cpp
+[4.368s] [ 96%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[4.433s] [100%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[4.528s] [100%] Built target mav_system_msgs__rosidl_typesupport_fastrtps_c
+[4.570s] [100%] Built target mav_system_msgs__rosidl_typesupport_introspection_cpp
+[4.616s] [100%] Built target mav_system_msgs
+[4.655s] Invoked command in '/home/santosh/pico_ws/src/build/mav_system_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/mav_system_msgs -- -j16 -l16
+[4.655s] Invoking command in '/home/santosh/pico_ws/src/build/mav_system_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/mav_system_msgs
+[4.669s] -- Install configuration: ""
+[4.670s] -- Execute custom install script
+[4.671s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/ament_index/resource_index/rosidl_interfaces/mav_system_msgs
+[4.693s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/cpu_info.h
+[4.715s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__functions.h
+[4.736s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__struct.h
+[4.760s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__type_support.h
+[4.771s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__functions.h
+[4.802s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__struct.h
+[4.821s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__type_support.h
+[4.839s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/process_info.h
+[4.856s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/rosidl_generator_c__visibility_control.h
+[4.869s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/library_path.sh
+[4.897s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/library_path.dsv
+[4.917s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__rosidl_typesupport_fastrtps_c.h
+[4.951s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__rosidl_typesupport_fastrtps_c.h
+[4.971s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[4.985s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/cpu_info.hpp
+[5.002s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__builder.hpp
+[5.022s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__struct.hpp
+[5.049s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__traits.hpp
+[5.066s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__type_support.hpp
+[5.087s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__builder.hpp
+[5.105s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__struct.hpp
+[5.114s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__traits.hpp
+[5.124s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__type_support.hpp
+[5.134s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/process_info.hpp
+[5.145s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
+[5.158s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__rosidl_typesupport_fastrtps_cpp.hpp
+[5.170s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__rosidl_typesupport_fastrtps_cpp.hpp
+[5.189s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[5.199s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__rosidl_typesupport_introspection_c.h
+[5.206s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__rosidl_typesupport_introspection_c.h
+[5.220s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[5.233s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__rosidl_typesupport_introspection_cpp.hpp
+[5.243s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__rosidl_typesupport_introspection_cpp.hpp
+[5.255s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/CpuInfo.idl
+[5.262s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/ProcessInfo.idl
+[5.272s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/CpuInfo.msg
+[5.280s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/msg/ProcessInfo.msg
+[5.289s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/ament_index/resource_index/package_run_dependencies/mav_system_msgs
+[5.304s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/ament_index/resource_index/parent_prefix_path/mav_system_msgs
+[5.315s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/ament_prefix_path.sh
+[5.328s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/ament_prefix_path.dsv
+[5.353s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/path.sh
+[5.372s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/environment/path.dsv
+[5.394s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/local_setup.bash
+[5.413s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/local_setup.sh
+[5.451s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/local_setup.zsh
+[5.469s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/local_setup.dsv
+[5.488s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/package.dsv
+[5.506s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/ament_index/resource_index/packages/mav_system_msgs
+[5.518s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/rosidl_cmake-extras.cmake
+[5.530s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[5.542s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[5.558s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[5.576s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[5.586s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[5.595s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[5.605s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/rosidl_cmake_aggregate_target-extras.cmake
+[5.618s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgsConfig.cmake
+[5.631s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgsConfig-version.cmake
+[5.642s] -- Symlinking: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/package.xml
+[5.651s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_generator_c.so
+[5.653s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_generator_c.so" to ""
+[5.653s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_c.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.654s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.654s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_c.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.654s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_c.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_c.so" to ""
+[5.654s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_cpp.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.654s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_cpp.so
+[5.654s] -- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_cpp.so" to ""
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cppExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.655s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cppExport.cmake
+[5.656s] -- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.661s] Invoked command in '/home/santosh/pico_ws/src/build/mav_system_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/mav_system_msgs

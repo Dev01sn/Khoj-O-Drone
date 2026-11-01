@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/rotors_swift_description/ament_cmake_core/rotors_swift_descriptionConfig-version.cmake

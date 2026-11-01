@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/whycode-ros2/whycode-ros2/launch/camera.launch.py

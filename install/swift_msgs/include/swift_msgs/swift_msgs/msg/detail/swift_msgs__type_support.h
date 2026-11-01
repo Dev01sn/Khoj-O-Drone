@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/swift_msgs/rosidl_generator_c/swift_msgs/msg/detail/swift_msgs__type_support.h

@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/mav_msgs/rosidl_generator_py/mav_msgs/msg/_rate_thrust_s.c

@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/controller_msg/rosidl_generator_c/controller_msg/msg/rosidl_generator_c__visibility_control.h

@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/error_msg/ament_cmake_environment_hooks/local_setup.sh

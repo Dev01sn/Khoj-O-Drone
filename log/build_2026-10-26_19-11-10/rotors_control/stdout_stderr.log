@@ -1,0 +1,32 @@
+[35m[1mConsolidate compiler generated dependencies of target roll_pitch_yawrate_thrust_controller[0m
+[ 50%] Built target roll_pitch_yawrate_thrust_controller
+[35m[1mConsolidate compiler generated dependencies of target roll_pitch_yawrate_thrust_controller_node[0m
+[100%] Built target roll_pitch_yawrate_thrust_controller_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/lib/rotors_control/roll_pitch_yawrate_thrust_controller_node
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/library_path.sh
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/library_path.dsv
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/ament_index/resource_index/package_run_dependencies/rotors_control
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/ament_index/resource_index/parent_prefix_path/rotors_control
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/path.sh
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/environment/path.dsv
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/local_setup.bash
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/local_setup.sh
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/local_setup.zsh
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/local_setup.dsv
+-- Symlinking: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/package.dsv
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/ament_index/resource_index/packages/rotors_control
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/cmake/ament_cmake_export_libraries-extras.cmake
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/cmake/rotors_controlConfig.cmake
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/cmake/rotors_controlConfig-version.cmake
+-- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_control/share/rotors_control/package.xml
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/lib/libroll_pitch_yawrate_thrust_controller.a
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/include/rotors_control
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/include/rotors_control/common.hpp
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/include/rotors_control/roll_pitch_yawrate_thrust_controller.hpp
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/include/rotors_control/parameters_ros.hpp
+-- Up-to-date: /home/santosh/pico_ws/src/install/rotors_control/include/rotors_control/parameters.hpp

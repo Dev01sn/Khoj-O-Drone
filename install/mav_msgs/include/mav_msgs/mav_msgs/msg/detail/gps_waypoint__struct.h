@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/mav_msgs/rosidl_generator_c/mav_msgs/msg/detail/gps_waypoint__struct.h

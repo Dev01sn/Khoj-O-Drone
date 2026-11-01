@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/controller_msg/rosidl_generator_py/controller_msg/_controller_msg_s.ep.rosidl_typesupport_c.c

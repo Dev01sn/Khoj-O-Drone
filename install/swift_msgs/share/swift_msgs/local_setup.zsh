@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/swift_msgs/ament_cmake_environment_hooks/local_setup.zsh

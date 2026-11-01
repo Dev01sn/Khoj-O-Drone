@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/build/rotors_control/ament_cmake_core/rotors_controlConfig-version.cmake

@@ -1,0 +1,37 @@
+[0.027s] Invoking command in '/home/santosh/pico_ws/src/build/rotors_swift_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/rotors_swift_description -- -j16 -l16
+[0.098s] Invoked command in '/home/santosh/pico_ws/src/build/rotors_swift_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/rotors_swift_description -- -j16 -l16
+[0.106s] Invoking command in '/home/santosh/pico_ws/src/build/rotors_swift_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/rotors_swift_description
+[0.127s] -- Install configuration: ""
+[0.143s] -- Execute custom install script
+[0.143s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/materials/scripts/whycon_marker.material
+[0.143s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/base_link.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/cropped-image.png
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/m1_link.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/m2_link.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/m3_link.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/m4_link.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/propeller_ccw.dae
+[0.145s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/propeller_cw.dae
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/textures/whycon_marker.png
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/whycon2.mtl
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/meshes/whycon2.obj
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/model.config
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/swift_pico.sdf
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/textures/whycon_marker.png
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/models/swift_pico/whycon_marker_file.xacro
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/ament_index/resource_index/package_run_dependencies/rotors_swift_description
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/ament_index/resource_index/parent_prefix_path/rotors_swift_description
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/environment/ament_prefix_path.sh
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/environment/ament_prefix_path.dsv
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/environment/path.sh
+[0.146s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/environment/path.dsv
+[0.147s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/local_setup.bash
+[0.147s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/local_setup.sh
+[0.149s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/local_setup.zsh
+[0.150s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/local_setup.dsv
+[0.150s] -- Symlinking: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/package.dsv
+[0.159s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/ament_index/resource_index/packages/rotors_swift_description
+[0.159s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/cmake/rotors_swift_descriptionConfig.cmake
+[0.159s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/cmake/rotors_swift_descriptionConfig-version.cmake
+[0.159s] -- Up-to-date symlink: /home/santosh/pico_ws/src/install/rotors_swift_description/share/rotors_swift_description/package.xml
+[0.165s] Invoked command in '/home/santosh/pico_ws/src/build/rotors_swift_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/rotors_swift_description

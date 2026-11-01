@@ -18,7 +18,8 @@
   <depend>geometry_msgs</depend>
   <depend>whycode_interfaces</depend>
   <depend>std_msgs</depend>
-  <!-- <depend>waypoint_navigation</depend> -->
+  <depend>waypoint_navigation</depend>
+  <depend>action_msgs</depend>
 
   <depend>rosgraph_msgs</depend>      
   <depend>sensor_msgs</depend>          
