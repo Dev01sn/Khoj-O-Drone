@@ -1,0 +1,119 @@
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found std_msgs: 4.9.2 (/opt/ros/humble/share/std_msgs/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+-- Found rosidl_generator_c: 3.1.9 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.9 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found ament_cmake_ros: 0.10.1 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/santosh/pico_ws/src/build/mav_system_msgs
+[  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[  6%] Built target mav_system_msgs__cpp
+[ 10%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[ 13%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[ 17%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[ 20%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_system_msgs/msg/detail/cpu_info__functions.c.o[0m
+[ 24%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_generator_c.dir/rosidl_generator_c/mav_system_msgs/msg/detail/process_info__functions.c.o[0m
+[ 27%] [32m[1mLinking C shared library libmav_system_msgs__rosidl_generator_c.so[0m
+[ 27%] Built target mav_system_msgs__rosidl_generator_c
+[ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[ 37%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[ 41%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_system_msgs/msg/detail/dds_fastrtps/process_info__type_support.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/mav_system_msgs/msg/detail/dds_fastrtps/cpu_info__type_support.cpp.o[0m
+[ 48%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_system_msgs/msg/detail/cpu_info__type_support.c.o[0m
+[ 51%] [32mBuilding C object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/mav_system_msgs/msg/detail/process_info__type_support.c.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_system_msgs/msg/cpu_info__type_support.cpp.o[0m
+[ 58%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/mav_system_msgs/msg/process_info__type_support.cpp.o[0m
+[ 62%] [32m[1mLinking C shared library libmav_system_msgs__rosidl_typesupport_introspection_c.so[0m
+[ 65%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_system_msgs/msg/detail/cpu_info__type_support.cpp.o[0m
+[ 68%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/mav_system_msgs/msg/detail/process_info__type_support.cpp.o[0m
+[ 68%] Built target mav_system_msgs__rosidl_typesupport_introspection_c
+[ 72%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_system_msgs/msg/cpu_info__type_support.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/mav_system_msgs/msg/process_info__type_support.cpp.o[0m
+[ 79%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_system_msgs/msg/detail/process_info__type_support_c.cpp.o[0m
+[ 82%] [32mBuilding CXX object CMakeFiles/mav_system_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/mav_system_msgs/msg/detail/cpu_info__type_support_c.cpp.o[0m
+[ 86%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_c.so[0m
+[ 89%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_cpp.so[0m
+[ 89%] Built target mav_system_msgs__rosidl_typesupport_c
+[ 89%] Built target mav_system_msgs__rosidl_typesupport_cpp
+[ 93%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[ 93%] Built target mav_system_msgs__rosidl_typesupport_introspection_cpp
+[ 96%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[100%] [32m[1mLinking CXX shared library libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[100%] Built target mav_system_msgs__rosidl_typesupport_fastrtps_c
+[100%] Built target mav_system_msgs__rosidl_typesupport_fastrtps_cpp
+[100%] Built target mav_system_msgs
+-- Install configuration: ""
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__functions.c
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__functions.c
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_generator_c.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_generator_c.so" to ""
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_c.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/dds_fastrtps
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__type_support.c
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__type_support.c
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_c.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_c.so" to ""
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_c.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_c.so" to ""
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg
+-- Up-to-date: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/process_info__type_support.cpp
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/include/mav_system_msgs/mav_system_msgs/msg/detail/cpu_info__type_support.cpp
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_cpp.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_cpp.so
+-- Set runtime path of "/home/santosh/pico_ws/src/install/mav_system_msgs/lib/libmav_system_msgs__rosidl_typesupport_cpp.so" to ""
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/package.dsv
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_generator_cppExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/export_mav_system_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cppExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cppExport.cmake
+-- Installing: /home/santosh/pico_ws/src/install/mav_system_msgs/share/mav_system_msgs/cmake/mav_system_msgs__rosidl_typesupport_cppExport-noconfig.cmake

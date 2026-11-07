@@ -1,0 +1,4 @@
+source;share/whycode/local_setup.bash
+source;share/whycode/local_setup.dsv
+source;share/whycode/local_setup.sh
+source;share/whycode/local_setup.zsh

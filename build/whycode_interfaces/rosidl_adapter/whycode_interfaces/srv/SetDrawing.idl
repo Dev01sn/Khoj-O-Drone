@@ -1,0 +1,23 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/SetDrawing.srv
+// generated code does not contain a copyright notice
+
+
+module whycode_interfaces {
+  module srv {
+    struct SetDrawing_Request {
+      @verbatim (language="comment", text=
+        "draw/hide coordinates")
+      boolean draw_coords;
+
+      @verbatim (language="comment", text=
+        "draw/hide segmentation outcome")
+      boolean draw_segments;
+    };
+    struct SetDrawing_Response {
+      @verbatim (language="comment", text=
+        "bool feedback")
+      boolean success;
+    };
+  };
+};

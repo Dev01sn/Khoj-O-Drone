@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from whycode_interfaces/msg/Marker.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Vector3.idl"
+
+module whycode_interfaces {
+  module msg {
+    struct Marker {
+      @verbatim (language="comment", text=
+        "ID")
+      int8 id;
+
+      @verbatim (language="comment", text=
+        "in pixels")
+      int32 size;
+
+      @verbatim (language="comment", text=
+        "camera coordinates")
+      float u;
+
+      @verbatim (language="comment", text=
+        "camera coordinates")
+      float v;
+
+      @verbatim (language="comment", text=
+        "rotation around surface normal")
+      float angle;
+
+      @verbatim (language="comment", text=
+        "pose")
+      geometry_msgs::msg::Pose position;
+
+      @verbatim (language="comment", text=
+        "euler angles roll, pitch, yaw")
+      geometry_msgs::msg::Vector3 rotation;
+    };
+  };
+};

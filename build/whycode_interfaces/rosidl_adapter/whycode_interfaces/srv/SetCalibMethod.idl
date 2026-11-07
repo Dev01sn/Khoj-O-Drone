@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/SetCalibMethod.srv
+// generated code does not contain a copyright notice
+
+
+module whycode_interfaces {
+  module srv {
+    struct SetCalibMethod_Request {
+      @verbatim (language="comment", text=
+        "0 = autocalibration" "\n"
+        "1 = manual calibration")
+      int8 method;
+    };
+    struct SetCalibMethod_Response {
+      @verbatim (language="comment", text=
+        "bool feedback")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "information message")
+      string msg;
+    };
+  };
+};

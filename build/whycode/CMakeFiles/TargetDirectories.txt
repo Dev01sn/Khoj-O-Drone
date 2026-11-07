@@ -1,0 +1,10 @@
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/uninstall.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/whycode_uninstall.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/whycode_node.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/test.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/edit_cache.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/rebuild_cache.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/list_install_components.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/install.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/install/local.dir
+/home/santosh/pico_ws/src/build/whycode/CMakeFiles/install/strip.dir

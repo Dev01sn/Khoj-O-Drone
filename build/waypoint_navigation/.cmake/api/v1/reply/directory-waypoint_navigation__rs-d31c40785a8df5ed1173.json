@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "waypoint_navigation__rs",
+		"source" : "/home/santosh/pico_ws/src/build/waypoint_navigation/waypoint_navigation__rs"
+	}
+}

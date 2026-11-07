@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/SelectMarker.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+
+module whycode_interfaces {
+  module srv {
+    struct SelectMarker_Request {
+      @verbatim (language="comment", text=
+        "x,y of seleceted marker in image coordinates")
+      geometry_msgs::msg::Point point;
+    };
+    struct SelectMarker_Response {
+      @verbatim (language="comment", text=
+        "bool feedback")
+      boolean success;
+    };
+  };
+};

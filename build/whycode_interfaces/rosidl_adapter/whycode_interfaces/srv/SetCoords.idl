@@ -1,0 +1,25 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/SetCoords.srv
+// generated code does not contain a copyright notice
+
+
+module whycode_interfaces {
+  module srv {
+    struct SetCoords_Request {
+      @verbatim (language="comment", text=
+        "0 = camera coords" "\n"
+        "1 = 2D coords" "\n"
+        "2 = 3D coords")
+      int8 coords;
+    };
+    struct SetCoords_Response {
+      @verbatim (language="comment", text=
+        "bool feedback")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "information message")
+      string msg;
+    };
+  };
+};

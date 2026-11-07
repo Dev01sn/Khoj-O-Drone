@@ -1,0 +1,6 @@
+{
+  "package_name": "error_msg",
+  "non_idl_tuples": [
+    "/home/santosh/pico_ws/src/controller_tuner/error_msg:msg/Error.msg"
+  ]
+}

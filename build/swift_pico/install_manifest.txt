@@ -1,0 +1,4 @@
+/home/santosh/pico_ws/src/install/swift_pico/lib/swift_pico/pico_client
+/home/santosh/pico_ws/src/install/swift_pico/lib/swift_pico/pico_server
+/home/santosh/pico_ws/src/install/swift_pico/lib/swift_pico/waypoint_service
+/home/santosh/pico_ws/src/install/swift_pico/share/swift_pico/package.dsv

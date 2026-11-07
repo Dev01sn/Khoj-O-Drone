@@ -12,6 +12,7 @@ CODE MODULARITY AND TECHNIQUES MENTIONED LIKE THIS WILL HELP YOU GAINING MORE MA
 
 // importing the required libraries
 #include <chrono>
+#include <thread>
 #include <functional>
 #include <memory>
 
@@ -120,11 +121,12 @@ class Swift_Pico : public rclcpp::Node
             //------------------------Add other ROS 2 Subscribers here-----------------------------------------------------
 
 
+            publish_heartbeat();
+            heartbeat_timer = this->create_wall_timer(100ms, std::bind(&Swift_Pico::publish_heartbeat, this));
+
+            std::this_thread::sleep_for(500ms); // let the heartbeat reach the rosbag before arming
             //Arming the drone
             arm();
-
-            publish_heartbeat();
-            heartbeat_timer = this->create_wall_timer(1s, std::bind(&Swift_Pico::publish_heartbeat, this));
 
             //Creating a timer to run the pid function periodically, refer ROS 2 tutorials on how to create a publisher subscriber(C++)
 

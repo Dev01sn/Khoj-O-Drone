@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/SetCalibPath.srv
+// generated code does not contain a copyright notice
+
+
+module whycode_interfaces {
+  module srv {
+    struct SetCalibPath_Request {
+      @verbatim (language="comment", text=
+        "either \"save\" or \"load\"")
+      string action;
+
+      @verbatim (language="comment", text=
+        "path to yaml file")
+      string path;
+    };
+    struct SetCalibPath_Response {
+      @verbatim (language="comment", text=
+        "bool feedback")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "information message")
+      string msg;
+    };
+  };
+};

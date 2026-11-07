@@ -1,0 +1,165 @@
+[0.029s] Invoking command in '/home/santosh/pico_ws/src/build/swift_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake /home/santosh/pico_ws/src/rotors_simulator/swift_msgs -DCMAKE_INSTALL_PREFIX=/home/santosh/pico_ws/src/install/swift_msgs
+[0.134s] -- The C compiler identification is GNU 11.4.0
+[0.203s] -- The CXX compiler identification is GNU 11.4.0
+[0.208s] -- Detecting C compiler ABI info
+[0.269s] -- Detecting C compiler ABI info - done
+[0.277s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.277s] -- Detecting C compile features
+[0.277s] -- Detecting C compile features - done
+[0.280s] -- Detecting CXX compiler ABI info
+[0.343s] -- Detecting CXX compiler ABI info - done
+[0.352s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.352s] -- Detecting CXX compile features
+[0.352s] -- Detecting CXX compile features - done
+[0.354s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.471s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.565s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.570s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.579s] -- Found rosidl_adapter: 3.1.9 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.618s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.854s] -- Found ament_cmake_ros: 0.10.1 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.027s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.217s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.243s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.246s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.276s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.276s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.276s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.276s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.296s] -- Found PythonExtra: .so  
+[1.392s] -- Found ament_lint_auto: 0.12.15 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.416s] -- Added test 'lint_cmake' to check CMake code style
+[1.418s] -- Added test 'xmllint' to check XML markup files
+[1.421s] -- Configuring done
+[1.452s] -- Generating done
+[1.463s] -- Build files have been written to: /home/santosh/pico_ws/src/build/swift_msgs
+[1.472s] Invoked command in '/home/santosh/pico_ws/src/build/swift_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake /home/santosh/pico_ws/src/rotors_simulator/swift_msgs -DCMAKE_INSTALL_PREFIX=/home/santosh/pico_ws/src/install/swift_msgs
+[1.473s] Invoking command in '/home/santosh/pico_ws/src/build/swift_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/swift_msgs -- -j16 -l16
+[1.511s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.523s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.524s] [  9%] [34m[1mGenerating Rust code for ROS interfaces[0m
+[1.527s] [  9%] Built target ament_cmake_python_copy_swift_msgs
+[1.734s] [ 12%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_generator_c.dir/rosidl_generator_c/swift_msgs/msg/detail/swift_msgs__functions.c.o[0m
+[1.813s] running egg_info
+[1.814s] creating swift_msgs.egg-info
+[1.816s] writing swift_msgs.egg-info/PKG-INFO
+[1.823s] writing dependency_links to swift_msgs.egg-info/dependency_links.txt
+[1.823s] writing top-level names to swift_msgs.egg-info/top_level.txt
+[1.823s] writing manifest file 'swift_msgs.egg-info/SOURCES.txt'
+[1.823s] [ 15%] [32m[1mLinking C shared library libswift_msgs__rosidl_generator_c.so[0m
+[1.823s] reading manifest file 'swift_msgs.egg-info/SOURCES.txt'
+[1.825s] writing manifest file 'swift_msgs.egg-info/SOURCES.txt'
+[1.841s] [ 15%] Built target swift_msgs__rs
+[1.874s] [ 15%] Built target ament_cmake_python_build_swift_msgs_egg
+[1.883s] [ 15%] Built target swift_msgs__cpp
+[1.899s] [ 15%] Built target swift_msgs__rosidl_generator_c
+[1.909s] [ 18%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.909s] [ 21%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.909s] [ 25%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.931s] [ 28%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.931s] [ 31%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.931s] [ 34%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.326s] [ 37%] [32mBuilding CXX object CMakeFiles/swift_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/swift_msgs/msg/swift_msgs__type_support.cpp.o[0m
+[2.399s] [ 40%] [32mBuilding CXX object CMakeFiles/swift_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/swift_msgs/msg/detail/dds_fastrtps/swift_msgs__type_support.cpp.o[0m
+[2.418s] [ 43%] [32m[1mLinking CXX shared library libswift_msgs__rosidl_typesupport_c.so[0m
+[2.429s] [ 46%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/swift_msgs/msg/detail/swift_msgs__type_support.c.o[0m
+[2.497s] [ 50%] [32mBuilding CXX object CMakeFiles/swift_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/swift_msgs/msg/swift_msgs__type_support.cpp.o[0m
+[2.520s] [ 53%] [32m[1mLinking C shared library libswift_msgs__rosidl_typesupport_introspection_c.so[0m
+[2.578s] [ 53%] Built target swift_msgs__rosidl_typesupport_c
+[2.587s] [ 56%] [32mBuilding CXX object CMakeFiles/swift_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/swift_msgs/msg/detail/swift_msgs__type_support_c.cpp.o[0m
+[2.589s] [ 56%] Built target swift_msgs__rosidl_typesupport_introspection_c
+[2.643s] [ 59%] [32mBuilding CXX object CMakeFiles/swift_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/swift_msgs/msg/detail/swift_msgs__type_support.cpp.o[0m
+[3.157s] [ 62%] [32m[1mLinking CXX shared library libswift_msgs__rosidl_typesupport_cpp.so[0m
+[3.260s] [ 65%] [32m[1mLinking CXX shared library libswift_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.302s] [ 65%] Built target swift_msgs__rosidl_typesupport_cpp
+[3.582s] [ 65%] Built target swift_msgs__rosidl_typesupport_fastrtps_cpp
+[3.796s] [ 68%] [32m[1mLinking CXX shared library libswift_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[3.900s] [ 71%] [32m[1mLinking CXX shared library libswift_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[3.921s] [ 71%] Built target swift_msgs__rosidl_typesupport_fastrtps_c
+[3.976s] [ 71%] Built target swift_msgs__rosidl_typesupport_introspection_cpp
+[4.006s] [ 71%] Built target swift_msgs
+[4.037s] [ 75%] [34m[1mGenerating Python code for ROS interfaces[0m
+[4.437s] [ 75%] Built target swift_msgs__py
+[4.483s] [ 78%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_generator_py.dir/rosidl_generator_py/swift_msgs/msg/_swift_msgs_s.c.o[0m
+[4.753s] [ 81%] [32m[1mLinking C shared library rosidl_generator_py/swift_msgs/libswift_msgs__rosidl_generator_py.so[0m
+[4.816s] [ 81%] Built target swift_msgs__rosidl_generator_py
+[4.863s] [ 84%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/swift_msgs/_swift_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.864s] [ 87%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/swift_msgs/_swift_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.873s] [ 90%] [32mBuilding C object CMakeFiles/swift_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/swift_msgs/_swift_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[5.004s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/swift_msgs/swift_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.035s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/swift_msgs/swift_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.054s] [100%] [32m[1mLinking C shared library rosidl_generator_py/swift_msgs/swift_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[5.110s] [100%] Built target swift_msgs__rosidl_typesupport_fastrtps_c__pyext
+[5.130s] [100%] Built target swift_msgs__rosidl_typesupport_c__pyext
+[5.131s] [100%] Built target swift_msgs__rosidl_typesupport_introspection_c__pyext
+[5.165s] Invoked command in '/home/santosh/pico_ws/src/build/swift_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --build /home/santosh/pico_ws/src/build/swift_msgs -- -j16 -l16
+[5.171s] Invoking command in '/home/santosh/pico_ws/src/build/swift_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/swift_msgs
+[5.198s] -- Install configuration: ""
+[5.198s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.198s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.198s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.198s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail/swift_msgs__functions.c
+[5.199s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_generator_c.so
+[5.204s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_generator_c.so" to ""
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.205s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_fastrtps_c.so
+[5.205s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_fastrtps_c.so" to ""
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.205s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.205s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail/swift_msgs__type_support.c
+[5.205s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_introspection_c.so
+[5.205s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_introspection_c.so" to ""
+[5.205s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_c.so
+[5.206s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_c.so" to ""
+[5.206s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.206s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.206s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.208s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.208s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.208s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.208s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail/dds_fastrtps
+[5.208s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_fastrtps_cpp.so
+[5.210s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""
+[5.210s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs
+[5.210s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg
+[5.210s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail
+[5.210s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/include/swift_msgs/swift_msgs/msg/detail/swift_msgs__type_support.cpp
+[5.211s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_introspection_cpp.so
+[5.211s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[5.211s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_cpp.so
+[5.212s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_typesupport_cpp.so" to ""
+[5.213s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs-0.0.0-py3.10.egg-info
+[5.213s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs
+[5.213s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs/msg
+[5.310s] Listing '/home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs'...
+[5.310s] Compiling '/home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs/__init__.py'...
+[5.310s] Listing '/home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs/msg'...
+[5.310s] Compiling '/home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs/msg/__init__.py'...
+[5.310s] Compiling '/home/santosh/pico_ws/src/install/swift_msgs/local/lib/python3.10/dist-packages/swift_msgs/msg/_swift_msgs.py'...
+[5.325s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_generator_py.so
+[5.325s] -- Set runtime path of "/home/santosh/pico_ws/src/install/swift_msgs/lib/libswift_msgs__rosidl_generator_py.so" to ""
+[5.326s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/rust
+[5.326s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/rust/src
+[5.326s] -- Up-to-date: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/rust/src/msg
+[5.326s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/package.dsv
+[5.333s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_generator_cExport.cmake
+[5.333s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_generator_cExport-noconfig.cmake
+[5.334s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[5.334s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[5.337s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_introspection_cExport.cmake
+[5.337s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[5.338s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_cExport.cmake
+[5.338s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[5.338s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_generator_cppExport.cmake
+[5.339s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[5.339s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[5.339s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[5.339s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[5.340s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_cppExport.cmake
+[5.340s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/swift_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[5.340s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_generator_pyExport.cmake
+[5.340s] -- Installing: /home/santosh/pico_ws/src/install/swift_msgs/share/swift_msgs/cmake/export_swift_msgs__rosidl_generator_pyExport-noconfig.cmake
+[5.347s] Invoked command in '/home/santosh/pico_ws/src/build/swift_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/santosh/ros2_prc/install/robocontroller:/opt/ros/humble /usr/bin/cmake --install /home/santosh/pico_ws/src/build/swift_msgs

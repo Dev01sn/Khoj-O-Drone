@@ -128,6 +128,7 @@ class WayPointServer(Node):
         self.create_subscription(Odometry, '/rotors/odometry', self.odometry_callback, 10,
                                  callback_group=self.odometry_callback_group)
 
+<<<<<<< HEAD
         # Action server
         self._action_server = ActionServer(
             self,
@@ -140,6 +141,20 @@ class WayPointServer(Node):
 
         self.publish_heartbeat()
         self.create_timer(0.1, self.publish_heartbeat)
+=======
+        self.create_subscription(Odometry, '/rotors/odometry', self.odometry_callback, 10, callback_group=self.odometry_callback_group)
+
+        #create an action server for the action 'NavToWaypoint'. Refer to Writing an action server and client (Python) in ROS 2 tutorials
+        #action name should 'waypoint_navigation'.
+        #include the action_callback_group in the action server. Refer to executors in ROS 2 concepts
+
+        
+        self.publish_heartbeat()
+        self.create_timer(0.1, self.publish_heartbeat)
+
+        time.sleep(0.5)  # let the heartbeat reach the rosbag before arming
+        self.arm()
+>>>>>>> efec93359cde2f83cf3b073fd6f7ac1d3ce538ae
 
         time.sleep(0.5)  # let the heartbeat reach the rosbag before arming
         self.arm()

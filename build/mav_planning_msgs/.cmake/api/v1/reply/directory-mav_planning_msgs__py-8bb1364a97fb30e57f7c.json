@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "mav_planning_msgs__py",
+		"source" : "/home/santosh/pico_ws/src/build/mav_planning_msgs/mav_planning_msgs__py"
+	}
+}

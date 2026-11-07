@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "whycode_interfaces__rs",
+		"source" : "/home/santosh/pico_ws/src/build/whycode_interfaces/whycode_interfaces__rs"
+	}
+}

@@ -1,0 +1,27 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from whycode_interfaces/srv/GetGuiSettings.srv
+// generated code does not contain a copyright notice
+
+
+module whycode_interfaces {
+  module srv {
+    struct GetGuiSettings_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    struct GetGuiSettings_Response {
+      @verbatim (language="comment", text=
+        "draw/hide coordinates")
+      boolean draw_coords;
+
+      @verbatim (language="comment", text=
+        "draw/hide segmentation outcome")
+      boolean draw_segments;
+
+      @verbatim (language="comment", text=
+        "0 = camera coords" "\n"
+        "1 = 2D coords" "\n"
+        "2 = 3D coords")
+      int8 coords;
+    };
+  };
+};

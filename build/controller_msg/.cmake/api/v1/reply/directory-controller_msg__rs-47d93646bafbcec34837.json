@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "controller_msg__rs",
+		"source" : "/home/santosh/pico_ws/src/build/controller_msg/controller_msg__rs"
+	}
+}

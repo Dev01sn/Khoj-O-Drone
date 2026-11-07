@@ -1,0 +1,4 @@
+# generated from rosidl_cmake/cmake/rosidl_cmake-extras.cmake.in
+
+set(whycode_interfaces_IDL_FILES "msg/Marker.idl;msg/MarkerArray.idl;srv/SelectMarker.idl;srv/SetCalibMethod.idl;srv/SetCalibPath.idl;srv/SetCoords.idl;srv/SetDrawing.idl;srv/GetGuiSettings.idl")
+set(whycode_interfaces_INTERFACE_FILES "msg/Marker.msg;msg/MarkerArray.msg;srv/SelectMarker.srv;srv/SelectMarker_Request.msg;srv/SelectMarker_Response.msg;srv/SetCalibMethod.srv;srv/SetCalibMethod_Request.msg;srv/SetCalibMethod_Response.msg;srv/SetCalibPath.srv;srv/SetCalibPath_Request.msg;srv/SetCalibPath_Response.msg;srv/SetCoords.srv;srv/SetCoords_Request.msg;srv/SetCoords_Response.msg;srv/SetDrawing.srv;srv/SetDrawing_Request.msg;srv/SetDrawing_Response.msg;srv/GetGuiSettings.srv;srv/GetGuiSettings_Request.msg;srv/GetGuiSettings_Response.msg")

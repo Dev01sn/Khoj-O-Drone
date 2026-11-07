@@ -1,0 +1,6 @@
+setup.py
+waypoint_navigation/__init__.py
+waypoint_navigation.egg-info/PKG-INFO
+waypoint_navigation.egg-info/SOURCES.txt
+waypoint_navigation.egg-info/dependency_links.txt
+waypoint_navigation.egg-info/top_level.txt

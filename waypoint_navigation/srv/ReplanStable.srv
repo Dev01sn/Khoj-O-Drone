@@ -1,0 +1,7 @@
+# Position from the most recent action feedback at the Switch.
+geometry_msgs/Point current_position
+---
+# Route in flight order. The final pose is F6.
+geometry_msgs/PoseArray waypoints
+# One label per pose: use these to distinguish transit points, survivors and F6.
+string[] marker_ids

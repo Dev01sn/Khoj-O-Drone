@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from waypoint_navigation/srv/GetWaypoints.srv
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/PoseArray.idl"
+
+module waypoint_navigation {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct GetWaypoints_Request {
+      boolean get_waypoints;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct GetWaypoints_Response {
+      geometry_msgs::msg::PoseArray waypoints;
+
+      sequence<string> marker_ids;
+    };
+  };
+};

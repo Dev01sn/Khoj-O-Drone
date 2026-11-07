@@ -1,0 +1,1 @@
+/home/santosh/pico_ws/src/install/rotors_swift_gazebo/share/rotors_swift_gazebo/package.dsv

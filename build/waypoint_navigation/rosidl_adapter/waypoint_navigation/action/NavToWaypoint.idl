@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from waypoint_navigation/action/NavToWaypoint.action
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/PoseStamped.idl"
+
+module waypoint_navigation {
+  module action {
+    @verbatim (language="comment", text=
+      "Request")
+    struct NavToWaypoint_Goal {
+      geometry_msgs::msg::Pose waypoint;
+
+      boolean hover;
+    };
+    @verbatim (language="comment", text=
+      "Result")
+    struct NavToWaypoint_Result {
+      int32 hov_time;
+    };
+    @verbatim (language="comment", text=
+      "Feedback")
+    struct NavToWaypoint_Feedback {
+      geometry_msgs::msg::PoseStamped current_waypoint;
+    };
+  };
+};

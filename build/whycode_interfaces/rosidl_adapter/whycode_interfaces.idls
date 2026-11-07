@@ -1,0 +1,8 @@
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:msg/Marker.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:msg/MarkerArray.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/SelectMarker.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/SetCalibMethod.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/SetCalibPath.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/SetCoords.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/SetDrawing.idl
+/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_adapter/whycode_interfaces:srv/GetGuiSettings.idl

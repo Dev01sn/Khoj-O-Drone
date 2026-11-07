@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "error_msg__rs",
+		"source" : "/home/santosh/pico_ws/src/build/error_msg/error_msg__rs"
+	}
+}
