@@ -261,155 +261,253 @@ def build_route(names: Sequence[str], coordinates: Dict[str, Point]) -> List[Way
     return plan_route(coordinates[START], stops)
 
 
-# Debug picture 
-def _pixel_of(name: str) -> Tuple[int, int]:
+
+# Task 3A detection and routing (kept in this service, alongside Task 2C helpers).
+import heapq
+import json
+from geometry_msgs.msg import Pose
+from waypoint_navigation.srv import ReplanStable
+
+def _pixel_of(name):
     return (ord(name[0]) - ord("A") + 1) * CELL_PX, int(name[1:]) * CELL_PX
 
-
-def draw_debug_image(arena: np.ndarray, survivors: Sequence[Survivor], route: Sequence[Waypoint]) -> np.ndarray:
-    img = arena.copy()
-    for k in range(1, GRID_CELLS):
-        cv2.line(img, (k * CELL_PX, 0), (k * CELL_PX, ARENA_PX), (0, 255, 0), 1)
-        cv2.line(img, (0, k * CELL_PX), (ARENA_PX, k * CELL_PX), (0, 255, 0), 1)
-    legs = [_pixel_of(START)] + [_pixel_of(w.name) for w in route]
-    for a, b in zip(legs, legs[1:]):
-        cv2.line(img, a, b, (0, 165, 255), 3)
-    for s in survivors:
-        cv2.drawContours(img, [s.outline], -1, (255, 0, 255), 2)
-        cv2.circle(img, (int(s.centre[0]), int(s.centre[1])), 4, (0, 0, 0), -1)
-    white = (255, 255, 255)
-    cv2.putText(img, "START " + START, (legs[0][0] + 8, legs[0][1] + 24), cv2.FONT_HERSHEY_SIMPLEX, 0.7, white, 2)
-    for order, w in enumerate(route, 1):
-        px, py = _pixel_of(w.name)
-        cv2.putText(img, "%d:%s" % (order, w.name), (px + 8, py - 8), cv2.FONT_HERSHEY_SIMPLEX, 0.7, white, 2)
-    return img
+STEP = 5
+MARGIN = 35  # pixels on the 900 x 900 view; verify against drone size and drift
 
 
-# 3. ROS node
-class WaypointService(Node):
+def yellow_survivors(arena):
+    hsv = cv2.cvtColor(arena, cv2.COLOR_BGR2HSV)
+    mask = cv2.inRange(hsv, np.array((20, 130, 140)), np.array((40, 255, 255)))
+    mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    found = []
+    for c in contours:
+        area = cv2.contourArea(c)
+        perimeter = cv2.arcLength(c, True)
+        if not 300 <= area <= 8000 or perimeter == 0:
+            continue
+        if 4 * math.pi * area / (perimeter * perimeter) < 0.65:
+            continue
+        m = cv2.moments(c)
+        if not m['m00']:
+            continue
+        x, y = m['m10'] / m['m00'], m['m01'] / m['m00']
+        found.append(Survivor(intersection_name(x, y), (x, y), c))
+    return found
 
-    def __init__(self) -> None:
-        super().__init__("waypoint_service")
-        self.declare_parameter("grid_csv", "")         # override the CSV location
-        self.declare_parameter("debug_image", "")      # e.g. /tmp/route.png
 
-        self._route: List[Waypoint] = []
-        self._route_ready = threading.Event()          # set once planning has finished
-        self._frame_seen = False
+def obstacle_mask(arena):
+    hsv = cv2.cvtColor(arena, cv2.COLOR_BGR2HSV)
+    dark = cv2.inRange(hsv, np.array((0, 0, 0)), np.array((179, 255, 30)))
+    dark = cv2.morphologyEx(dark, cv2.MORPH_OPEN, np.ones((5, 5), np.uint8))
+    contours, _ = cv2.findContours(dark, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+    obstacles = [c for c in contours if 8000 <= cv2.contourArea(c) <= 50000]
+    mask = np.zeros(dark.shape, np.uint8)
+    cv2.drawContours(mask, obstacles, -1, 255, thickness=cv2.FILLED)
+    kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2*MARGIN+1, 2*MARGIN+1))
+    return obstacles, cv2.dilate(mask, kernel)
 
-        # The service may have to wait for the image callback, so they must be able
-        # to run on different executor threads at the same time.
-        group = ReentrantCallbackGroup()
-        # The camera publishes ONE latched frame: match it, or a late start misses it.
-        latched = QoSProfile(depth=1,
-                             reliability=ReliabilityPolicy.RELIABLE,
-                             durability=DurabilityPolicy.TRANSIENT_LOCAL)
-        self._image_sub = self.create_subscription(Image, "/image_raw", self._on_image, latched,
-                                                   callback_group=group)
-        self.create_service(GetWaypoints, "waypoints", self._on_request, callback_group=group)
-        self.get_logger().info("Waiting for one /image_raw frame...")
 
-    # image -> route 
-    def _on_image(self, msg) -> None:
-        if self._frame_seen:                           # a second delivery changes nothing
-            return
-        self._frame_seen = True
+def grid_point(xy):
+    return tuple(int(round(float(v) / STEP)) for v in xy)
+
+
+def astar(mask, start, end):
+    height, width = mask.shape
+    start, end = grid_point(start), grid_point(end)
+    def open_cell(p):
+        x, y = p[0]*STEP, p[1]*STEP
+        return 0 <= x < width and 0 <= y < height and mask[y, x] == 0
+    if not open_cell(start) or not open_cell(end):
+        raise ValueError('Start or destination is inside an off-limits area')
+    frontier = [(0.0, start)]
+    cost = {start: 0.0}
+    parent = {}
+    while frontier:
+        _, here = heapq.heappop(frontier)
+        if here == end:
+            points = [here]
+            while points[-1] != start:
+                points.append(parent[points[-1]])
+            return [(x*STEP, y*STEP) for x, y in reversed(points)]
+        for dx, dy in ((1,0),(-1,0),(0,1),(0,-1),(1,1),(1,-1),(-1,1),(-1,-1)):
+            nxt = (here[0]+dx, here[1]+dy)
+            if not open_cell(nxt):
+                continue
+            if dx and dy and (not open_cell((here[0]+dx, here[1])) or not open_cell((here[0], here[1]+dy))):
+                continue
+            new = cost[here] + math.hypot(dx, dy)
+            if new < cost.get(nxt, float('inf')):
+                cost[nxt] = new
+                parent[nxt] = here
+                heapq.heappush(frontier, (new + math.dist(nxt, end), nxt))
+    raise ValueError('No clear route between %s and %s' % (start, end))
+
+
+def clear_line(mask, a, b):
+    # Check every pixel on the segment, not only the endpoints.
+    canvas = np.zeros(mask.shape, np.uint8)
+    cv2.line(canvas, a, b, 255, 1)
+    return not np.any(cv2.bitwise_and(canvas, mask))
+
+
+def simplify(mask, points):
+    out = [points[0]]
+    i = 0
+    while i < len(points)-1:
+        j = len(points)-1
+        while j > i+1 and not clear_line(mask, points[i], points[j]):
+            j -= 1
+        if not clear_line(mask, points[i], points[j]):
+            raise ValueError('Grid segment intersects obstacle; increase resolution')
+        out.append(points[j])
+        i = j
+    return out
+
+
+def route(mask, start, stops, home=None):
+    best = None
+    for order in itertools.permutations(stops):
+        destinations = list(order) + ([('F6', home)] if home is not None else [])
+        here, legs, length = start, [], 0.0
         try:
-            route = self._plan(msg)
-        except Exception as error:
-            # keep the subscription so a later frame can retry; requests keep waiting
-            self.get_logger().error("Route planning failed: %s (waiting for another frame)" % error)
-            self._frame_seen = False
+            for name, dest in destinations:
+                path = simplify(mask, astar(mask, here, dest))
+                length += sum(math.dist(a, b) for a, b in zip(path, path[1:]))
+                legs.append((name, path))
+                here = dest
+        except ValueError:
+            continue
+        if best is None or length < best[0]:
+            best = (length, legs)
+    if best is None:
+        raise ValueError('No route found; inspect the mask and start position')
+    return best
+
+
+
+def load_grid():
+    from ament_index_python.packages import get_package_share_directory
+    path = Path(get_package_share_directory('swift_pico')) / 'scripts' / 'grid_whycode_coordinates.json'
+    with path.open() as f:
+        raw = json.load(f)
+    return {k: (float(v['x']), float(v['y'])) for k, v in raw.items()}
+
+
+class WaypointService(Node):
+    def __init__(self):
+        super().__init__('waypoint_service')
+        self.declare_parameter('debug_image', '')
+        self.ready = threading.Event()
+        self.planning = threading.Lock()
+        self.grid = load_grid()
+        # Calibration from the team's grid, used to map transit points and feedback.
+        names = sorted(self.grid)
+        pixels = np.array([[*_pixel_of(n), 1.0] for n in names])
+        world = np.array([self.grid[n] for n in names])
+        self.mapping = np.linalg.lstsq(pixels, world, rcond=None)[0]
+        self.inverse = np.linalg.inv(self.mapping[:2, :])
+        self.mask = None
+        self.stable = []
+        self.critical_route = []
+        group = ReentrantCallbackGroup()
+        qos = QoSProfile(depth=1, reliability=ReliabilityPolicy.RELIABLE,
+                         durability=DurabilityPolicy.TRANSIENT_LOCAL)
+        self.image_sub = self.create_subscription(Image, '/image_raw', self.image_callback, qos, callback_group=group)
+        self.create_service(GetWaypoints, 'waypoints', self.critical_callback, callback_group=group)
+        self.create_service(ReplanStable, 'replan_stable', self.stable_callback, callback_group=group)
+        self.get_logger().info('Waiting for the arena image')
+
+    def pixel_to_world(self, p):
+        xy = np.array([p[0], p[1], 1.0]) @ self.mapping
+        return float(xy[0]), float(xy[1])
+
+    def world_to_pixel(self, x, y):
+        p = (np.array([x, y]) - self.mapping[2, :]) @ self.inverse
+        return float(p[0]), float(p[1])
+
+    def make_route(self, start, survivors, home=False):
+        destinations = [(s.name, _pixel_of(s.name)) for s in survivors]
+        _, legs = route(self.mask, start, destinations,
+                                home=_pixel_of('F6') if home else None)
+        goals = []
+        for name, path in legs:
+            for p in path[1:-1]:
+                x, y = self.pixel_to_world(p)
+                goals.append((x, y, 'TRANSIT'))
+            x, y = self.grid[name]
+            goals.append((x, y, 'HOME' if name == 'F6' and home else 'SURVIVOR:' + name))
+        return goals
+
+    def image_callback(self, msg):
+        if self.ready.is_set() or not self.planning.acquire(blocking=False):
             return
-        self._route = route
-        self._route_ready.set()
-        self.destroy_subscription(self._image_sub)
+        try:
+            arena = rectify_arena(image_msg_to_bgr(msg))
+            critical = find_critical_survivors(arena)
+            stable = yellow_survivors(arena)
+            obstacles, mask = obstacle_mask(arena)
+            self.mask = mask
+            self.stable = stable
+            self.critical_route = self.make_route(_pixel_of('F6'), critical)
+            path = self.get_parameter('debug_image').value
+            if path:
+                overlay = arena.copy()
+                overlay[mask != 0] = (overlay[mask != 0] * 0.55 + np.array([0, 0, 100])*0.45).astype(np.uint8)
+                for s in critical + stable:
+                    cv2.putText(overlay, s.name, tuple(map(int, s.centre)), cv2.FONT_HERSHEY_SIMPLEX, .6, (255,255,255), 2)
+                cv2.imwrite(path, overlay)
+            self.ready.set()
+            self.get_logger().info('Detected critical %s; stable %s; obstacles %d' % ([s.name for s in critical], [s.name for s in stable], len(obstacles)))
+        except Exception as e:
+            self.get_logger().error('Arena not ready: %s' % e)
+        finally:
+            self.planning.release()
 
-    def _plan(self, msg) -> List[Waypoint]:
-        coordinates = load_grid_coordinates(locate_grid_csv(self.get_parameter("grid_csv").value))
-        arena = rectify_arena(image_msg_to_bgr(msg))
-        survivors = find_critical_survivors(arena)
-        names = [s.name for s in survivors]
-        self.get_logger().info("Critical survivors (%d): %s" % (len(names), names))
-        if len(names) != 4:
-            self.get_logger().warn("Expected 4 critical survivors - check the red detection settings.")
+    def fill(self, response, goals):
+        response.waypoints.header.frame_id = 'whycode'
+        for x, y, label in goals:
+            p = Pose()
+            p.position.x, p.position.y, p.position.z = x, y, 13.0
+            p.orientation.w = 1.0
+            response.waypoints.poses.append(p)
+            response.marker_ids.append(label)
+        return response
 
-        route = build_route(names, coordinates)
-        length = path_length(coordinates[START], route)
-        self.get_logger().info("Route from %s (%.2f units): %s" % (
-            START, length, " -> ".join("%s(%.2f, %.2f)" % (w.name, w.x, w.y) for w in route)))
+    def wait_ready(self):
+        while rclpy.ok() and not self.ready.wait(.1):
+            pass
+        return self.ready.is_set()
 
-        debug_path = self.get_parameter("debug_image").value
-        if debug_path:
-            cv2.imwrite(debug_path, draw_debug_image(arena, survivors, route))
-        return route
+    def critical_callback(self, request, response):
+        if request.get_waypoints and self.wait_ready():
+            self.fill(response, self.critical_route)
+        return response
 
-    # -- GetWaypoints --
-    def _on_request(self, request, response):
-        if not self._route_ready.is_set():
-            self.get_logger().info("Request arrived before the route was ready - waiting.")
-            while rclpy.ok() and not self._route_ready.wait(timeout=0.1):
-                pass
-        if request.get_waypoints:                      # the client sets get_waypoints = True
-            has_ids = hasattr(response, "marker_ids")  # optional field
-            for w in self._route:
-                pose = Pose()
-                pose.position.x, pose.position.y, pose.position.z = w.x, w.y, FLIGHT_HEIGHT
-                response.waypoints.poses.append(pose)
-                if has_ids:
-                    response.marker_ids.append(w.name)  # parallel to poses: which survivor each is
-            response.waypoints.header.frame_id = "whycode"
-            self.get_logger().info("Sent %d waypoints." % len(self._route))
+    def stable_callback(self, request, response):
+        if not self.wait_ready():
+            return response
+        pos = request.current_position
+        try:
+            p = self.world_to_pixel(pos.x, pos.y)
+            self.fill(response, self.make_route(p, self.stable, home=True))
+        except Exception as e:
+            self.get_logger().error('Stable replan failed: %s' % e)
         return response
 
 
-def run_node(args=None) -> None:
-    rclpy.init(args=args)
+def main():
+    rclpy.init()
     node = WaypointService()
     executor = MultiThreadedExecutor(num_threads=4)
     executor.add_node(node)
     try:
         executor.spin()
-    except KeyboardInterrupt:
-        pass
     finally:
+        executor.shutdown()
         node.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():
+            rclpy.shutdown()
 
-
-# 4. Offline check
-def run_offline(argv: Sequence[str]) -> None:
-    parser = argparse.ArgumentParser(description="Plan a route from a saved frame (no ROS needed).")
-    parser.add_argument("--image", required=True, help="saved camera frame")
-    parser.add_argument("--csv", default="", help="grid_whycode_coordinates.csv (auto-located if omitted)")
-    parser.add_argument("--debug", default="", help="write the debug picture here")
-    args, _ = parser.parse_known_args(argv)
-
-    frame = cv2.imread(args.image)
-    if frame is None:
-        sys.exit("ERROR: could not load image: %s" % args.image)
-    coordinates = load_grid_coordinates(locate_grid_csv(args.csv))
-    arena = rectify_arena(frame)
-    survivors = find_critical_survivors(arena)
-    route = build_route([s.name for s in survivors], coordinates)
-
-    print("Critical survivors (%d): %s" % (len(survivors), [s.name for s in survivors]))
-    print("Route from %s, %.2f units:" % (START, path_length(coordinates[START], route)))
-    for order, w in enumerate(route, 1):
-        print("  %d. %-4s (%.2f, %.2f, %.1f)" % (order, w.name, w.x, w.y, FLIGHT_HEIGHT))
-    if args.debug:
-        cv2.imwrite(args.debug, draw_debug_image(arena, survivors, route))
-        print("Saved", args.debug)
-
-
-def main(args=None) -> None:
-    if "--image" in sys.argv:
-        run_offline(sys.argv[1:])
-    elif rclpy is None:
-        sys.exit("ERROR: ROS 2 (rclpy) is not available; use --image for the offline check.")
-    else:
-        run_node(args)
-
-
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()

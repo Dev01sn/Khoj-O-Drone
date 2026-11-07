@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import time
 import math
+import threading
+import json
+from pathlib import Path
 from tf_transformations import euler_from_quaternion
 import rclpy
 from rclpy.action import ActionServer, GoalResponse, CancelResponse
@@ -41,6 +44,14 @@ class WayPointServer(Node):
         # Current position [x, y, z] - updated in whycode_callback
         self.current_state = [0.0, 0.0, 0.0]
         self.have_marker = False   # PID stays idle until the first valid marker
+        self.last_marker_wall = 0.0
+        self.marker_loss_count = 0
+        self.ground_z = None
+        self.setpoint_lock = threading.Lock()
+        from ament_index_python.packages import get_package_share_directory
+        grid_path = Path(get_package_share_directory('swift_pico')) / 'scripts' / 'grid_whycode_coordinates.json'
+        with grid_path.open() as f:
+            self.home_xy = json.load(f)['F6']
         self.new_data = False      # True when a fresh marker arrived since the last PID run
         self.use_tuner = False     # True = GUI tuner, False = gains from code
         self.previous_state = [0.0, 0.0, 0.0]
@@ -128,7 +139,6 @@ class WayPointServer(Node):
         self.create_subscription(Odometry, '/rotors/odometry', self.odometry_callback, 10,
                                  callback_group=self.odometry_callback_group)
 
-<<<<<<< HEAD
         # Action server
         self._action_server = ActionServer(
             self,
@@ -141,20 +151,6 @@ class WayPointServer(Node):
 
         self.publish_heartbeat()
         self.create_timer(0.1, self.publish_heartbeat)
-=======
-        self.create_subscription(Odometry, '/rotors/odometry', self.odometry_callback, 10, callback_group=self.odometry_callback_group)
-
-        #create an action server for the action 'NavToWaypoint'. Refer to Writing an action server and client (Python) in ROS 2 tutorials
-        #action name should 'waypoint_navigation'.
-        #include the action_callback_group in the action server. Refer to executors in ROS 2 concepts
-
-        
-        self.publish_heartbeat()
-        self.create_timer(0.1, self.publish_heartbeat)
-
-        time.sleep(0.5)  # let the heartbeat reach the rosbag before arming
-        self.arm()
->>>>>>> efec93359cde2f83cf3b073fd6f7ac1d3ce538ae
 
         time.sleep(0.5)  # let the heartbeat reach the rosbag before arming
         self.arm()
@@ -185,11 +181,16 @@ class WayPointServer(Node):
         self.command_pub.publish(self.cmd)
 
     def whycode_callback(self, msg):
-        if not msg.markers:          # no marker visible -> keep last state
+        if not msg.markers:
+            self.marker_loss_count += 1
+            self.last_marker_wall = 0.0
             return
         marker = msg.markers[0]
         pos = marker.position.position
         self.current_state = [pos.x, pos.y, pos.z]
+        self.last_marker_wall = time.monotonic()
+        if self.ground_z is None and not self.control_enabled:
+            self.ground_z = pos.z
         self.state_time = self.get_clock().now().nanoseconds * 1e-9
 
         # the yaw controller works in degrees, so convert here
@@ -230,11 +231,12 @@ class WayPointServer(Node):
 
     def pid(self):
         # A new waypoint is applied HERE (in the control cycle), so the setpoint never changes mid-calculation
-        pending = self.pending_desired
-        if pending is not None:
-            self.pending_desired = None
-            self.desired_state = pending
-            self.control_enabled = True
+        with self.setpoint_lock:
+            pending = self.pending_desired
+            if pending is not None:
+                self.pending_desired = None
+                self.desired_state = pending
+                self.control_enabled = True
 
         # No goal yet: keep the armed, neutral command alive and wait
         if not self.control_enabled:
@@ -344,92 +346,96 @@ class WayPointServer(Node):
     def cancel_callback(self, goal_handle):
         return CancelResponse.ACCEPT
 
+    def set_target(self, target):
+        with self.setpoint_lock:
+            self.pending_desired = list(target)
+
+    def fresh_marker(self):
+        return self.last_marker_wall > 0 and time.monotonic() - self.last_marker_wall < 0.35
+
+    def hold_here(self):
+        self.set_target(self.current_state.copy())
+
     def execute_callback(self, goal_handle):
-
-        self.get_logger().info('Executing goal...')
-        wp = goal_handle.request.waypoint.position
-        target = [wp.x, wp.y, wp.z]
-        self.pending_desired = target     # picked up by pid() on its next cycle (the goal's 'hover' field is not used)
-
-        self.get_logger().info(f'New Waypoint Set: {target}')
-        self.max_time_inside_sphere = 0
-        self.point_in_sphere_start_time = None
-        self.time_inside_sphere = 0
-        self.duration = self.dtime
-
-        first_in_time = None
-        peak_dev = [0.0, 0.0, 0.0]   # worst |pos - target| per axis after first entering the box (= overshoot)
-        exits = 0
-
-        feedback_msg = NavToWaypoint.Feedback()
+        pose = goal_handle.request.waypoint
+        p = pose.position
+        target = [p.x, p.y, p.z]
+        is_home = (goal_handle.request.hover and abs(p.z - 13.0) < 0.05
+                   and math.hypot(p.x - self.home_xy['x'], p.y - self.home_xy['y']) < 0.08)
+        holding = goal_handle.request.hover
+        hold_seconds = 2.0 if abs(p.z - 14.0) < 0.05 else 1.0
+        feedback = NavToWaypoint.Feedback()
         result = NavToWaypoint.Result()
-
+        started = time.monotonic()
+        inside_since = None
+        seen_loss_count = self.marker_loss_count
+        self.set_target(target)
         try:
-            #  checks whether the drone hovers at the waypoint for HOLD_TIME seconds 
             while rclpy.ok():
-
                 if goal_handle.is_cancel_requested:
+                    self.hold_here()
                     goal_handle.canceled()
                     return result
-
-                # current whycon pose
-                state = self.current_state
-                feedback_msg.current_waypoint.pose.position.x = state[0]
-                feedback_msg.current_waypoint.pose.position.y = state[1]
-                feedback_msg.current_waypoint.pose.position.z = state[2]
-                feedback_msg.current_waypoint.header.stamp.sec = int(self.max_time_inside_sphere)
-
-                goal_handle.publish_feedback(feedback_msg)
-
-                drone_is_in_sphere = self.is_drone_in_box(state, target, HOLD_TOL)
-
-                if first_in_time is not None:
-                    for k in range(3):
-                        peak_dev[k] = max(peak_dev[k], abs(state[k] - target[k]))
-
-                if not drone_is_in_sphere and self.point_in_sphere_start_time is None:
-                    pass
-
-                elif drone_is_in_sphere and self.point_in_sphere_start_time is None:
-                    self.point_in_sphere_start_time = self.dtime
-                    if first_in_time is None:
-                        first_in_time = self.dtime
-                        self.get_logger().info('Drone in box for 1st time')
-
-                elif drone_is_in_sphere and self.point_in_sphere_start_time is not None:
-                    self.time_inside_sphere = self.dtime - self.point_in_sphere_start_time
-
-                elif not drone_is_in_sphere and self.point_in_sphere_start_time is not None:
-                    self.get_logger().info('Drone out of box')
-                    exits += 1
-                    self.point_in_sphere_start_time = None
-                    self.time_inside_sphere = 0
-
-                if self.time_inside_sphere > self.max_time_inside_sphere:
-                    self.max_time_inside_sphere = self.time_inside_sphere
-
-                if self.max_time_inside_sphere >= HOLD_TIME:
-                    break
-
-                time.sleep(0.02)     # the boilerplate loop had no sleep and pinned a CPU core
-
-            if self.max_time_inside_sphere < HOLD_TIME:     # left the loop because of shutdown
+                now = time.monotonic()
+                state = self.current_state.copy()
+                feedback.current_waypoint.pose.position.x = state[0]
+                feedback.current_waypoint.pose.position.y = state[1]
+                feedback.current_waypoint.pose.position.z = state[2]
+                feedback.current_waypoint.header.stamp = self.get_clock().now().to_msg()
+                if self.fresh_marker():
+                    goal_handle.publish_feedback(feedback)
+                if self.marker_loss_count != seen_loss_count:
+                    inside_since = None
+                    seen_loss_count = self.marker_loss_count
+                inside = self.fresh_marker() and math.dist(state, target) <= HOLD_TOL
+                if inside:
+                    if inside_since is None:
+                        inside_since = now
+                    if not holding or now - inside_since >= hold_seconds:
+                        break
+                else:
+                    inside_since = None
+                time.sleep(0.02)
+            else:
                 goal_handle.abort()
                 return result
-
+            if is_home:
+                # Ground z is measured before the first goal, not hardcoded.
+                if self.ground_z is None or self.ground_z <= 14.0:
+                    self.get_logger().error('Ground marker height unavailable; refusing automatic landing')
+                    goal_handle.abort()
+                    return result
+                z = target[2]
+                last = time.monotonic()
+                deadline = last + 25.0
+                while rclpy.ok() and time.monotonic() < deadline:
+                    if goal_handle.is_cancel_requested:
+                        self.hold_here()
+                        goal_handle.canceled()
+                        return result
+                    now = time.monotonic()
+                    if not self.fresh_marker():
+                        self.hold_here()
+                        goal_handle.abort()
+                        return result
+                    z = min(self.ground_z + 0.10, z + 0.25 * (now - last))
+                    last = now
+                    self.set_target([target[0], target[1], z])
+                    if self.current_state[2] >= self.ground_z - 0.12:
+                        self.control_enabled = False
+                        self.disarm()
+                        goal_handle.succeed()
+                        result.hov_time = int(now - started)
+                        return result
+                    time.sleep(0.05)
+                self.hold_here()
+                goal_handle.abort()
+                return result
             goal_handle.succeed()
-            result.hov_time = int(round(self.dtime - self.duration))   # total time taken to stabilise at this point
-            self.get_logger().info(
-                f'WP summary: reach={first_in_time - self.duration:.1f}s  hold_done={self.dtime - self.duration:.1f}s  '
-                f'peak_dev_after_entry={[round(v, 2) for v in peak_dev]}  box_exits={exits}')
+            result.hov_time = int(time.monotonic() - started)
             return result
-
         finally:
             self.busy = False
-
-    def is_drone_in_box(self, drone_pos, center, tol):
-        # task condition: within +-tol on every axis (a box, not a sphere)
-        return all(abs(drone_pos[i] - center[i]) <= tol for i in range(3))
 
 
 def main(args=None):
