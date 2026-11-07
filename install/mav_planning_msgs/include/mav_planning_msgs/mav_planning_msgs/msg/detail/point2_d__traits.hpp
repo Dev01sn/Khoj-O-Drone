@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_generator_cpp/mav_planning_msgs/msg/detail/point2_d__traits.hpp

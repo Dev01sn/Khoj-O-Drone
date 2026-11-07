@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_typesupport_introspection_c/whycode_interfaces/msg/detail/marker_array__rosidl_typesupport_introspection_c.h

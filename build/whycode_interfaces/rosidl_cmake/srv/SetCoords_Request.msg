@@ -1,3 +1,0 @@
-int8 coords  # 0 = camera coords
-             # 1 = 2D coords
-             # 2 = 3D coords

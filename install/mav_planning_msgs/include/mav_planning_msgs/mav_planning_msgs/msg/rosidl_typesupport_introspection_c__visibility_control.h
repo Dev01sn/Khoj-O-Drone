@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_typesupport_introspection_c/mav_planning_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h

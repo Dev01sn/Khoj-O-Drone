@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/rotors_control/ament_cmake_environment_hooks/local_setup.sh

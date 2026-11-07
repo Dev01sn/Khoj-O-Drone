@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_generator_rs/mav_planning_msgs/rust/src/msg.rs

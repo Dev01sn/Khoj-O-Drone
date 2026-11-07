@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/swift_pico_description/ament_cmake_core/swift_pico_descriptionConfig-version.cmake

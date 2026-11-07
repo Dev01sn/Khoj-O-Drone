@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_state_machine_msgs/rosidl_generator_cpp/mav_state_machine_msgs/msg/detail/start_stop_task__traits.hpp

@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/swift_msgs/rosidl_typesupport_introspection_c/swift_msgs/msg/detail/swift_msgs__rosidl_typesupport_introspection_c.h

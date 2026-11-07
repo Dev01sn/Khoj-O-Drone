@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/rotors_simulator/swift_msgs/msg/SwiftMsgs.msg

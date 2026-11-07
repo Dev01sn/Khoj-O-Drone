@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_generator_py/whycode_interfaces/srv/_get_gui_settings_s.c

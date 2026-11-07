@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/swift_msgs/ament_cmake_python/swift_msgs/swift_msgs.egg-info/top_level.txt

@@ -1,9 +1,0 @@
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/uninstall.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/pid_tune_uninstall.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/test.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/edit_cache.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/rebuild_cache.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/list_install_components.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/install.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/install/local.dir
-/home/santosh/pico_ws/src/build/pid_tune/CMakeFiles/install/strip.dir

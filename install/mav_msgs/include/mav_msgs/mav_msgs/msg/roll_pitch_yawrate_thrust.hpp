@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_msgs/rosidl_generator_cpp/mav_msgs/msg/roll_pitch_yawrate_thrust.hpp

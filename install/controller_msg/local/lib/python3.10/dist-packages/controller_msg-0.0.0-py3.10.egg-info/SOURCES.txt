@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/controller_msg/ament_cmake_python/controller_msg/controller_msg.egg-info/SOURCES.txt

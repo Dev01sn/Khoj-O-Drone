@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/swift_msgs/ament_cmake_core/swift_msgsConfig.cmake

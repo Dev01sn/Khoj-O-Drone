@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_generator_py/waypoint_navigation/srv/__init__.py

@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/install/mav_comm/share/mav_comm/package.dsv

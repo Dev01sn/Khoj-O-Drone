@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/error_msg/rosidl_generator_c/error_msg/msg/error.h

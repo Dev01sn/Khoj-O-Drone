@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_state_machine_msgs/rosidl_cmake/srv/RunTaskService_Request.msg

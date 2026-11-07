@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_typesupport_introspection_cpp/mav_planning_msgs/msg/detail/polygon_with_holes_stamped__rosidl_typesupport_introspection_cpp.hpp

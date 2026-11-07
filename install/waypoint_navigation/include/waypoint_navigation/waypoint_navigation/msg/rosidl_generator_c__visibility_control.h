@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_generator_c/waypoint_navigation/msg/rosidl_generator_c__visibility_control.h

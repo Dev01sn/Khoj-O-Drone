@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_state_machine_msgs/rosidl_generator_c/mav_state_machine_msgs/srv/detail/run_task_service__struct.h

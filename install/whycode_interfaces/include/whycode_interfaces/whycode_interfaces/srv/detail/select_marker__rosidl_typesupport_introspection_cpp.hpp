@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_typesupport_introspection_cpp/whycode_interfaces/srv/detail/select_marker__rosidl_typesupport_introspection_cpp.hpp

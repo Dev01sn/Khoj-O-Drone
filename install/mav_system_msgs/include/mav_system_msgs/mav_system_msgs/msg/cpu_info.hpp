@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_system_msgs/rosidl_generator_cpp/mav_system_msgs/msg/cpu_info.hpp

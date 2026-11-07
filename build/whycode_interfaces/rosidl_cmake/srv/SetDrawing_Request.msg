@@ -1,2 +1,0 @@
-bool draw_coords  # draw/hide coordinates
-bool draw_segments  # draw/hide segmentation outcome

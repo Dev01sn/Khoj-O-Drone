@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/swift_msgs/rosidl_generator_py/swift_msgs/msg/__init__.py

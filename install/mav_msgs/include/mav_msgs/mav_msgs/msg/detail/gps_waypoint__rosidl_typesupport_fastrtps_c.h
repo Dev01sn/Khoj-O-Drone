@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_msgs/rosidl_typesupport_fastrtps_c/mav_msgs/msg/detail/gps_waypoint__rosidl_typesupport_fastrtps_c.h

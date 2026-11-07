@@ -1,9 +1,0 @@
-# Request
-geometry_msgs/Pose waypoint
-bool hover
----
-# Result
-int32 hov_time
----
-# Feedback
-geometry_msgs/PoseStamped current_waypoint

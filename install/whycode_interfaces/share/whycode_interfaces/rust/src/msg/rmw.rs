@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_generator_rs/whycode_interfaces/rust/src/msg/rmw.rs

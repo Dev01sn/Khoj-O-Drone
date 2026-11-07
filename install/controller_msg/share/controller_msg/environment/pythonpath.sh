@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/controller_msg/ament_cmake_environment_hooks/pythonpath.sh

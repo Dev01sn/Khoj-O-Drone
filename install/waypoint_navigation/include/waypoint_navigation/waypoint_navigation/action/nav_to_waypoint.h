@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_generator_c/waypoint_navigation/action/nav_to_waypoint.h

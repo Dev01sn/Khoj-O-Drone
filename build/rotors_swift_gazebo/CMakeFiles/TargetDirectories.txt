@@ -1,9 +1,0 @@
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/uninstall.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/rotors_swift_gazebo_uninstall.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/test.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/edit_cache.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/rebuild_cache.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/list_install_components.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/install.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/install/local.dir
-/home/santosh/pico_ws/src/build/rotors_swift_gazebo/CMakeFiles/install/strip.dir

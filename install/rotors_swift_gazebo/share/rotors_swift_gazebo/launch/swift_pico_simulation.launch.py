@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/rotors_simulator/rotors_swift_gazebo/launch/swift_pico_simulation.launch.py

@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/ament_cmake_python/waypoint_navigation/waypoint_navigation.egg-info/dependency_links.txt

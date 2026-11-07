@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/error_msg/rosidl_generator_py/error_msg/msg/_error_s.c

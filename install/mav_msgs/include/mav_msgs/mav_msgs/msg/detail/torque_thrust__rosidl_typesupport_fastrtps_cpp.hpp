@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_msgs/rosidl_typesupport_fastrtps_cpp/mav_msgs/msg/detail/torque_thrust__rosidl_typesupport_fastrtps_cpp.hpp

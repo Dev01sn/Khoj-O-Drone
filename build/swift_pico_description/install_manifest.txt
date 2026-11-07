@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/install/swift_pico_description/share/swift_pico_description/package.dsv

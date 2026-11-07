@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/ament_cmake_python/mav_planning_msgs/mav_planning_msgs.egg-info/top_level.txt

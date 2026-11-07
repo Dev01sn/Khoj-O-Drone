@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_comm/ament_cmake_environment_hooks/local_setup.zsh

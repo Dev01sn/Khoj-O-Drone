@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/controller_msg/rosidl_generator_cpp/controller_msg/msg/detail/pid_tune__type_support.hpp

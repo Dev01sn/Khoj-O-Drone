@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_generator_cpp/waypoint_navigation/srv/get_waypoints.hpp

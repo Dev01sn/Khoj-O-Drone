@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_msgs/rosidl_typesupport_introspection_c/mav_msgs/msg/detail/roll_pitch_yawrate_thrust__rosidl_typesupport_introspection_c.h

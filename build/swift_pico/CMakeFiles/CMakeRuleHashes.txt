@@ -1,2 +1,0 @@
-# Hashes of file build rules.
-6954b9f6fe40dba428e5c9ef7af708f9 CMakeFiles/swift_pico_uninstall

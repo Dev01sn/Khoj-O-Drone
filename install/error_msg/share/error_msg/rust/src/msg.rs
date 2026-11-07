@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/error_msg/rosidl_generator_rs/error_msg/rust/src/msg.rs

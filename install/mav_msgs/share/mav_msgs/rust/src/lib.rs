@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_msgs/rosidl_generator_rs/mav_msgs/rust/src/lib.rs

@@ -1,1 +1,0 @@
-rclpy;rclcpp;swift_msgs;controller_msg;error_msg;geometry_msgs;whycode_interfaces;std_msgs;waypoint_navigation;action_msgs;rosgraph_msgs;sensor_msgs;actuator_msgs;nav_msgs;ament_index_python;ament_index_cpp;builtin_interfaces;libglfw3-dev;eigen;swift_pico_description;ros2launch;image_view;ament_lint_auto;ament_lint_common

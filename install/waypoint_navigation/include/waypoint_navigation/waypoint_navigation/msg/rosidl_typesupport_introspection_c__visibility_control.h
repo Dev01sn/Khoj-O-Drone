@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/waypoint_navigation/rosidl_typesupport_introspection_c/waypoint_navigation/msg/rosidl_typesupport_introspection_c__visibility_control.h

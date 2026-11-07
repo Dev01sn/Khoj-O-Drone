@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/swift_pico/launch/swift_pico_simulation.launch.py

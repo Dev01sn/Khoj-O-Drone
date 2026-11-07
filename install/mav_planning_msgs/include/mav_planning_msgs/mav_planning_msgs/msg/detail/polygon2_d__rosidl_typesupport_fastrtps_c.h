@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_typesupport_fastrtps_c/mav_planning_msgs/msg/detail/polygon2_d__rosidl_typesupport_fastrtps_c.h

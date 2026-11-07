@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/whycode-ros2/whycode-ros2/launch/whycode_bringup.launch.py

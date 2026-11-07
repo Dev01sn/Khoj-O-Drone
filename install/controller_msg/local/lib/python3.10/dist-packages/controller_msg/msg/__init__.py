@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/controller_msg/rosidl_generator_py/controller_msg/msg/__init__.py

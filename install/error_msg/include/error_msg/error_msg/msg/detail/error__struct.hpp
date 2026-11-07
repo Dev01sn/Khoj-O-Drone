@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/error_msg/rosidl_generator_cpp/error_msg/msg/detail/error__struct.hpp

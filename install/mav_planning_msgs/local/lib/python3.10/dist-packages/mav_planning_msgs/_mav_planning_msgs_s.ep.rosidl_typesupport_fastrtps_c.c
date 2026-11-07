@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/mav_planning_msgs/rosidl_generator_py/mav_planning_msgs/_mav_planning_msgs_s.ep.rosidl_typesupport_fastrtps_c.c

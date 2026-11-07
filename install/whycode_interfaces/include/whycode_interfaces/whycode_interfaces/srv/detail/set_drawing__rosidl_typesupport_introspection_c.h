@@ -1,1 +1,0 @@
-/home/santosh/pico_ws/src/build/whycode_interfaces/rosidl_typesupport_introspection_c/whycode_interfaces/srv/detail/set_drawing__rosidl_typesupport_introspection_c.h
